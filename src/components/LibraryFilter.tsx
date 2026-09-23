@@ -8,6 +8,11 @@ type Props = {
   onChange: (visible: Book[] | null) => void;
 };
 
+function readYear(book: Book): string | null {
+  const m = /(\d{4})/.exec(book.finished ?? "");
+  return m ? m[1]! : null;
+}
+
 export function LibraryFilter({ books, onChange }: Props) {
   const search = useServerFn(smartSearch);
   const [query, setQuery] = useState("");
