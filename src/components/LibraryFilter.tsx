@@ -68,8 +68,9 @@ export function LibraryFilter({ books, onChange }: Props) {
       list = books.filter((b) => rank.has(b.id)).sort((a, b) => rank.get(a.id)! - rank.get(b.id)!);
     }
     if (genre) list = list.filter((b) => (b.genres ?? []).includes(genre));
-    onChange(!ids && !genre ? null : list);
-  }, [ids, genre, books, onChange]);
+    if (year) list = list.filter((b) => readYear(b) === year);
+    onChange(!ids && !genre && !year ? null : list);
+  }, [ids, genre, year, books, onChange]);
 
   return (
     <div className="mt-8 w-full max-w-2xl">
