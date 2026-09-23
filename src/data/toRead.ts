@@ -64,7 +64,7 @@ export const toRead: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/15204209-L.jpg",
     "year": 2025,
     "blurb": "Empire of AI: Dreams and Nightmares in Sam Altman's OpenAI by Karen Hao.",
     "rating": 0.0,
@@ -72,7 +72,7 @@ export const toRead: Book[] = [
     "publisher": "Penguin Press",
     "binding": "hardcover",
     "finish": "cloth",
-    "spine": "#516335",
+    "spine": "#322e33",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": true,
@@ -80,7 +80,8 @@ export const toRead: Book[] = [
     "height": 242,
     "lean": -3.2,
     "depth": 4.7,
-    "wear": 0.12
+    "wear": 0.12,
+    "band": "#e86027"
   },
   {
     "id": "tr-bad-company-private-equity-and-35",
@@ -350,7 +351,7 @@ export const toRead: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/12030192-L.jpg",
     "year": 2012,
     "blurb": "\"This book is not about what happened to you as a child; it's about what failed to happen for you as a child. It's an extremely subtle, almost invisible factor called emotional neglect, and it disrupts one's life in untold ways. Psychologist Jonice Webb, PhD shows how emotional neglect in childhood has an insidious effect on us as adults, causing us to struggle with self-discipline and self-care, or to feel unworthy, disconnected, and unfulfilled. People experience childhood emotional neglect to varying degrees--fr",
     "rating": 0.0,
@@ -358,7 +359,7 @@ export const toRead: Book[] = [
     "publisher": "Morgan James Publishing",
     "binding": "mass",
     "finish": "gloss",
-    "spine": "#633545",
+    "spine": "#2f2f2f",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": true,
@@ -366,7 +367,8 @@ export const toRead: Book[] = [
     "height": 205,
     "lean": -3.2,
     "depth": 0.2,
-    "wear": 0.15
+    "wear": 0.15,
+    "band": "#ef1d22"
   },
   {
     "id": "tr-the-course-of-love-16",
@@ -480,7 +482,7 @@ export const toRead: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/12916783-L.jpg",
     "year": 2020,
     "blurb": "Master Your Success: Timeless Principles to Develop Inner Confidence and Create Authentic Success (Mastery Series Book 7) by Thibaut Meurisse.",
     "rating": 0.0,
@@ -488,15 +490,16 @@ export const toRead: Book[] = [
     "publisher": "",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#466335",
-    "ink": "#faf7f0",
+    "spine": "#f29f5b",
+    "ink": "#241f19",
     "face": "mono",
     "caps": false,
     "width": 19,
     "height": 224,
     "lean": -0.6,
     "depth": -4.1,
-    "wear": 0.26
+    "wear": 0.26,
+    "band": "#ffac62"
   },
   {
     "id": "tr-poverty-by-america-79",
