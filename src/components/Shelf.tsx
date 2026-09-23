@@ -28,19 +28,39 @@ export function Shelf({ books, justAdded = null }: Props) {
   const copies = totalWidth > LOOP_THRESHOLD ? 3 : 1;
   const rendered = copies === 3 ? [...books, ...books, ...books] : books;
 
-  const curve = useCallback(() => {
+  // cached geometry so scrolling never forces a layout read per book
+  const geo = useRef<{ els: HTMLElement[]; mid: number[] } | null>(null);
+  const raf = useRef<number | null>(null);
+
+  const measure = useCallback(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
-    const rect = scroller.getBoundingClientRect();
-    const center = rect.left + rect.width / 2;
-    const spines = scroller.querySelectorAll<HTMLElement>("[data-spine]");
-    spines.forEach((el) => {
-      const r = el.getBoundingClientRect();
-      const t = Math.max(-1, Math.min(1, (r.left + r.width / 2 - center) / (rect.width / 2)));
-      const ry = -Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34;
-      el.style.setProperty("--ry", `${ry}deg`);
-    });
+    const els = Array.from(scroller.querySelectorAll<HTMLElement>("[data-spine]"));
+    geo.current = { els, mid: els.map((el) => el.offsetLeft + el.offsetWidth / 2) };
   }, []);
+
+  const paint = useCallback(() => {
+    const scroller = scrollerRef.current;
+    const g = geo.current;
+    if (!scroller || !g) return;
+    const half = scroller.clientWidth / 2;
+    const center = scroller.scrollLeft + half;
+    for (let i = 0; i < g.els.length; i++) {
+      const d = g.mid[i]! - center;
+      if (Math.abs(d) > half + 240) continue; // offscreen: skip
+      const t = Math.max(-1, Math.min(1, d / half));
+      const ry = -Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34;
+      g.els[i]!.style.setProperty("--ry", `${ry}deg`);
+    }
+  }, []);
+
+  const curve = useCallback(() => {
+    if (raf.current !== null) return;
+    raf.current = requestAnimationFrame(() => {
+      raf.current = null;
+      paint();
+    });
+  }, [paint]);
 
   useLayoutEffect(() => {
     const scroller = scrollerRef.current;
