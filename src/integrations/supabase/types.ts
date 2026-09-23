@@ -14,7 +14,78 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      recommendations: {
+        Row: {
+          author: string
+          band: string | null
+          binding: string
+          caps: boolean
+          cover: string
+          created_at: string
+          depth: number
+          face: string
+          finish: string
+          height: number
+          id: string
+          ink: string
+          lean: number
+          note: string | null
+          publisher: string
+          recommender: string
+          spine: string
+          title: string
+          wear: number
+          width: number
+          year: number
+        }
+        Insert: {
+          author: string
+          band?: string | null
+          binding?: string
+          caps?: boolean
+          cover?: string
+          created_at?: string
+          depth?: number
+          face?: string
+          finish?: string
+          height?: number
+          id?: string
+          ink?: string
+          lean?: number
+          note?: string | null
+          publisher?: string
+          recommender: string
+          spine?: string
+          title: string
+          wear?: number
+          width?: number
+          year?: number
+        }
+        Update: {
+          author?: string
+          band?: string | null
+          binding?: string
+          caps?: boolean
+          cover?: string
+          created_at?: string
+          depth?: number
+          face?: string
+          finish?: string
+          height?: number
+          id?: string
+          ink?: string
+          lean?: number
+          note?: string | null
+          publisher?: string
+          recommender?: string
+          spine?: string
+          title?: string
+          wear?: number
+          width?: number
+          year?: number
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
