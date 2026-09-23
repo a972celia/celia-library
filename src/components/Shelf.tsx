@@ -28,6 +28,7 @@ export function Shelf({ books, justAdded = null }: Props) {
   const copies = totalWidth > LOOP_THRESHOLD ? 3 : 1;
   const rendered = copies === 3 ? [...books, ...books, ...books] : books;
 
+  const [range, setRange] = useState({ s: 0, e: 60 });
   // cached geometry so scrolling never forces a layout read per book
   const geo = useRef<{ els: HTMLElement[]; mid: number[] } | null>(null);
   const raf = useRef<number | null>(null);
