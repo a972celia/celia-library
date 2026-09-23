@@ -115,6 +115,44 @@ export function LibraryFilter({ books, onChange }: Props) {
           </button>
         ))}
       </div>
+
+      {years.length ? (
+        <div className="mt-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Year read</p>
+          <div className="no-scrollbar relative mt-3 flex items-end gap-5 overflow-x-auto pb-1 whitespace-nowrap">
+            <span className="pointer-events-none absolute bottom-[7px] left-0 right-0 h-px bg-border" />
+            <button
+              type="button"
+              onClick={() => setYear(null)}
+              className={`relative shrink-0 font-mono text-[10px] uppercase tracking-widest transition-colors ${
+                year === null ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              All
+              <span
+                className={`mx-auto mt-2 block size-[7px] rounded-full ${year === null ? "bg-primary" : "bg-border"}`}
+              />
+            </button>
+            {years.map(([y, n]) => (
+              <button
+                key={y}
+                type="button"
+                onClick={() => setYear(year === y ? null : y)}
+                title={`${n} book${n === 1 ? "" : "s"}`}
+                className={`relative shrink-0 font-mono text-[10px] uppercase tracking-widest transition-colors ${
+                  year === y ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {y}
+                <span className="ml-1 opacity-60">{n}</span>
+                <span
+                  className={`mx-auto mt-2 block size-[7px] rounded-full ${year === y ? "bg-primary" : "bg-border"}`}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
