@@ -28,26 +28,60 @@ export function Shelf({ books, justAdded = null }: Props) {
   const copies = totalWidth > LOOP_THRESHOLD ? 3 : 1;
   const rendered = copies === 3 ? [...books, ...books, ...books] : books;
 
-  const curve = useCallback(() => {
+  const [range, setRange] = useState({ s: 0, e: 60 });
+  // cached geometry so scrolling never forces a layout read per book
+  const geo = useRef<{ els: HTMLElement[]; mid: number[] } | null>(null);
+  const raf = useRef<number | null>(null);
+
+  const measure = useCallback(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
-    const rect = scroller.getBoundingClientRect();
-    const center = rect.left + rect.width / 2;
-    const spines = scroller.querySelectorAll<HTMLElement>("[data-spine]");
-    spines.forEach((el) => {
-      const r = el.getBoundingClientRect();
-      const t = Math.max(-1, Math.min(1, (r.left + r.width / 2 - center) / (rect.width / 2)));
-      const ry = -Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34;
-      el.style.setProperty("--ry", `${ry}deg`);
-    });
+    const els = Array.from(scroller.querySelectorAll<HTMLElement>("[data-spine]"));
+    geo.current = { els, mid: els.map((el) => el.offsetLeft + el.offsetWidth / 2) };
   }, []);
+
+  const paint = useCallback(() => {
+    const scroller = scrollerRef.current;
+    const g = geo.current;
+    if (!scroller || !g) return;
+    const half = scroller.clientWidth / 2;
+    const center = scroller.scrollLeft + half;
+    let first = -1;
+    let last = -1;
+    for (let i = 0; i < g.els.length; i++) {
+      const d = g.mid[i]! - center;
+      if (Math.abs(d) > half + 400) continue; // offscreen: skip
+      if (first < 0) first = i;
+      last = i;
+      const t = Math.max(-1, Math.min(1, d / half));
+      // round to 1 degree so we don't repaint for invisible differences
+      const ry = Math.round(-Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34);
+      const el = g.els[i]!;
+      if (el.dataset["ry"] !== String(ry)) {
+        el.dataset["ry"] = String(ry);
+        el.style.setProperty("--ry", `${ry}deg`);
+      }
+    }
+    if (first >= 0) {
+      setRange((r) => (Math.abs(r.s - first) > 4 || Math.abs(r.e - last) > 4 ? { s: first, e: last } : r));
+    }
+  }, []);
+
+  const curve = useCallback(() => {
+    if (raf.current !== null) return;
+    raf.current = requestAnimationFrame(() => {
+      raf.current = null;
+      paint();
+    });
+  }, [paint]);
 
   useLayoutEffect(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
     if (copies === 3) scroller.scrollLeft = scroller.scrollWidth / 3;
+    measure();
     curve();
-  }, [copies, curve, books.length]);
+  }, [copies, curve, measure, books.length]);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
@@ -85,12 +119,13 @@ export function Shelf({ books, justAdded = null }: Props) {
     if (!row || !scroller) return;
     const ro = new ResizeObserver(() => {
       setOverflowing(row.scrollWidth > scroller.clientWidth + 4);
+      measure();
       curve();
     });
     ro.observe(row);
     ro.observe(scroller);
     return () => ro.disconnect();
-  }, [curve]);
+  }, [curve, measure]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -158,7 +193,19 @@ export function Shelf({ books, justAdded = null }: Props) {
                 } as React.CSSProperties
               }
             >
-              <BookSpine book={book} onOpen={(el) => openAt(i, el)} />
+              {i >= range.s - 6 && i <= range.e + 6 ? (
+                <BookSpine book={book} onOpen={(el) => openAt(i, el)} />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  style={{
+                    width: book.width,
+                    height: book.height,
+                    backgroundColor: book.spine,
+                    borderRadius: 2,
+                  }}
+                />
+              )}
             </div>
           ))}
         </div>

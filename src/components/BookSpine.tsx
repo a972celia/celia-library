@@ -35,6 +35,8 @@ export function BookSpine({ book, onOpen }: Props) {
     }, 90);
   };
 
+  // shelf spines are tiny — load the small cover variant, not the large one
+  const thumb = book.cover ? book.cover.replace(/-L\.jpg$/, "-M.jpg") : "";
   const lean = hover ? 0 : book.lean;
   const translateZ = (hover ? PULL : 0) + book.depth;
   const translateY = hover ? LIFT : 0;
@@ -78,10 +80,9 @@ export function BookSpine({ book, onOpen }: Props) {
               <span
                 className="absolute inset-0 opacity-70"
                 style={{
-                  backgroundImage: `url(${book.cover})`,
+                  backgroundImage: `url(${thumb})`,
                   backgroundSize: "auto 100%",
                   backgroundPosition: "left center",
-                  filter: "saturate(0.9)",
                 }}
               />
             ) : null}
@@ -176,7 +177,7 @@ export function BookSpine({ book, onOpen }: Props) {
               transformOrigin: "left center",
               transform: "rotateY(90deg)",
               backgroundColor: book.spine,
-              backgroundImage: book.cover ? `url(${book.cover})` : undefined,
+              backgroundImage: book.cover ? `url(${thumb})` : undefined,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
