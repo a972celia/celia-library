@@ -143,7 +143,7 @@ export const toRead: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/13314878-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780671027032-L.jpg",
     "year": 1936,
     "blurb": "Available for the first time ever in trade paperback, Dale Carnegie's enduring classic, the inspirational personal development guide that shows how to achieve lifelong success. One of the top-selling books of all time, \"How to Win Friends & Influence People\" has sold more than 15 million copies in all its editions.",
     "rating": 0.0,
@@ -456,7 +456,7 @@ export const toRead: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/5263162-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780060928971-L.jpg",
     "year": 1997,
     "blurb": "Emotional Blackmail: When the People in Your Life Use Fear, Obligation, and Guilt to Manipulate You ― A Therapist's Practical Self-Help Guide by Susan Forward.",
     "rating": 0.0,
@@ -742,7 +742,7 @@ export const toRead: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/10106123-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/id/10211294-L.jpg",
     "year": 2000,
     "blurb": "\"In this update of his 2000 bestseller, Irrational Exuberance, Robert Shiller returns to the topic that gained him international fame: market volatility. Shiller breaks new ground in this second edition by laying out in even clearer and starker terms the market excess that continue to destabilize the economy and disrupt our lives.\" \"Building on the original edition, Shiller draws out the psychological origins of volatility in financial markets, this time folding real estate into his analysis. He broadens the eviden",
     "rating": 0.0,
