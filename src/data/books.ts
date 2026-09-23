@@ -87,7 +87,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/11295475-L.jpg",
     "year": 2017,
     "blurb": "\"Is there a hidden part of you that no one else sees? Do you have a vivid inner world of thoughts and emotions that your peers and loved ones can't seem to access? Have you ever been told you're too \"quiet,\" \"shy,\" \"boring,\" or \"awkward\"? Are your habits and comfort zones questioned by a society that doesn't seem to get the real you? If so, you might be an introvert. On behalf of those who have long been misunderstood, rejected, or ignored, fellow introvert Jenn Granneman writes a compassionate vindication-explorin",
     "rating": 3.0,
@@ -95,7 +95,7 @@ export const books: Book[] = [
     "publisher": "Skyhorse",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#3b6335",
+    "spine": "#3589ad",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": false,
@@ -103,7 +103,8 @@ export const books: Book[] = [
     "height": 228,
     "lean": -1.9,
     "depth": 4.5,
-    "wear": 0.04
+    "wear": 0.04,
+    "band": "#edad60"
   },
   {
     "id": "strangers-a-memoir-of-marriage-3",
@@ -138,7 +139,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/15070895-L.jpg",
     "year": 1942,
     "blurb": "The Stranger by Albert Camus.",
     "rating": 4.0,
@@ -146,7 +147,7 @@ export const books: Book[] = [
     "publisher": "Vintage International",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#354e63",
+    "spine": "#6f5a0d",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": false,
@@ -154,7 +155,8 @@ export const books: Book[] = [
     "height": 209,
     "lean": -1.9,
     "depth": -0.3,
-    "wear": 0.28
+    "wear": 0.28,
+    "band": "#dcaf00"
   },
   {
     "id": "remarkably-bright-creatures-71",
@@ -291,7 +293,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/6426475-L.jpg",
     "year": 2025,
     "blurb": "The Opposite of Settling: How to Get Everything You Want Out of Love and Life Without Losing Your Spark by Case Kenny.",
     "rating": 4.0,
@@ -299,15 +301,16 @@ export const books: Book[] = [
     "publisher": "Hay House LLC",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#63353a",
-    "ink": "#faf7f0",
+    "spine": "#ffffff",
+    "ink": "#241f19",
     "face": "mono",
     "caps": true,
     "width": 16,
     "height": 224,
     "lean": -2.3,
     "depth": 2.3,
-    "wear": 0.3
+    "wear": 0.3,
+    "band": "#068c27"
   },
   {
     "id": "careless-people-a-cautionary-t-95",
@@ -497,7 +500,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/14840717-L.jpg",
     "year": 2024,
     "blurb": "Good Work: Reclaiming Your Inner Ambition (The Pathless Path Collection Book 2) by Paul  Millerd.",
     "rating": 4.0,
@@ -505,7 +508,7 @@ export const books: Book[] = [
     "publisher": "Pathless Publishing",
     "binding": "mass",
     "finish": "gloss",
-    "spine": "#366335",
+    "spine": "#397288",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": false,
@@ -513,7 +516,8 @@ export const books: Book[] = [
     "height": 210,
     "lean": -4.8,
     "depth": -0.2,
-    "wear": 0.11
+    "wear": 0.11,
+    "band": "#1a4b66"
   },
   {
     "id": "supercommunicators-how-to-unlo-37",
@@ -522,7 +526,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/14591638-L.jpg",
     "year": 2024,
     "blurb": "Supercommunicators: How to Unlock the Secret Language of Connection by Charles Duhigg.",
     "rating": 4.0,
@@ -530,15 +534,16 @@ export const books: Book[] = [
     "publisher": "Random House",
     "binding": "paperback",
     "finish": "gloss",
-    "spine": "#5b6335",
-    "ink": "#faf7f0",
+    "spine": "#f3f3ed",
+    "ink": "#241f19",
     "face": "serif",
     "caps": false,
     "width": 16,
     "height": 221,
     "lean": -0.9,
     "depth": 2.8,
-    "wear": 0.35
+    "wear": 0.35,
+    "band": "#fae931"
   },
   {
     "id": "everything-is-fucked-ein-buch-82",
@@ -623,7 +628,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/8355956-L.jpg",
     "year": 1997,
     "blurb": "Don't Sweat the Small Stuff ... and It's All Small Stuff: Simple Ways to Keep the Little Things From Taking Over Your Life by Richard Carlson.",
     "rating": 3.0,
@@ -631,7 +636,7 @@ export const books: Book[] = [
     "publisher": "Bantam",
     "binding": "mass",
     "finish": "gloss",
-    "spine": "#356354",
+    "spine": "#64615d",
     "ink": "#faf7f0",
     "face": "sans",
     "caps": false,
@@ -639,7 +644,8 @@ export const books: Book[] = [
     "height": 207,
     "lean": -1.5,
     "depth": -1.4,
-    "wear": 0.17
+    "wear": 0.17,
+    "band": "#e7d093"
   },
   {
     "id": "good-vibes-good-life-how-self-31",
@@ -648,7 +654,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/10210924-L.jpg",
     "year": 2019,
     "blurb": "Good Vibes, Good Life: How Self-Love Is the Key to Unlocking Your Greatness by Vex King.",
     "rating": 3.0,
@@ -656,15 +662,16 @@ export const books: Book[] = [
     "publisher": "Hay House UK",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#635435",
-    "ink": "#faf7f0",
+    "spine": "#ffffff",
+    "ink": "#241f19",
     "face": "serif",
     "caps": false,
     "width": 17,
     "height": 206,
     "lean": -1.9,
     "depth": 1.2,
-    "wear": 0.04
+    "wear": 0.04,
+    "band": "#b7a40d"
   },
   {
     "id": "the-pathless-path-imagining-a-71",
@@ -699,7 +706,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/10873292-L.jpg",
     "year": 2000,
     "blurb": "The Tipping Point: How Little Things Can Make a Big Difference by Malcolm Gladwell.",
     "rating": 3.0,
@@ -707,15 +714,16 @@ export const books: Book[] = [
     "publisher": "Time Warner Book Group",
     "binding": "paperback",
     "finish": "gloss",
-    "spine": "#356263",
-    "ink": "#faf7f0",
+    "spine": "#a0a476",
+    "ink": "#241f19",
     "face": "sans",
     "caps": false,
     "width": 17,
     "height": 217,
     "lean": -1.3,
     "depth": -1.8,
-    "wear": 0.01
+    "wear": 0.01,
+    "band": "#e3e597"
   },
   {
     "id": "elon-musk-64",
@@ -828,7 +836,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/11471538-L.jpg",
     "year": 2021,
     "blurb": "The Gap and The Gain: The High Achievers' Guide to Happiness, Confidence, and Success by Dan  Sullivan.",
     "rating": 3.0,
@@ -836,7 +844,7 @@ export const books: Book[] = [
     "publisher": "Hay House Business",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#355b63",
+    "spine": "#43798c",
     "ink": "#faf7f0",
     "face": "mono",
     "caps": false,
@@ -844,7 +852,8 @@ export const books: Book[] = [
     "height": 206,
     "lean": -4.3,
     "depth": -4.2,
-    "wear": 0.1
+    "wear": 0.1,
+    "band": "#ffbf0c"
   },
   {
     "id": "billion-dollar-loser-the-epic-66",
@@ -932,7 +941,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/7996203-L.jpg",
     "year": 2013,
     "blurb": "Get the Guy: Learn Secrets of the Male Mind to Find the Man You Want and the Love You Deserve by Matthew Hussey.",
     "rating": 3.0,
@@ -940,8 +949,8 @@ export const books: Book[] = [
     "publisher": "Harper",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#634735",
-    "ink": "#faf7f0",
+    "spine": "#fbf6ea",
+    "ink": "#241f19",
     "face": "serif",
     "caps": true,
     "width": 16,
@@ -957,7 +966,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/551262-L.jpg",
     "year": 1997,
     "blurb": "The Power of Now: A Guide to Spiritual Enlightenment by Eckhart Tolle.",
     "rating": 4.0,
@@ -965,15 +974,16 @@ export const books: Book[] = [
     "publisher": "New World Library",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#4c3563",
-    "ink": "#faf7f0",
+    "spine": "#89c68e",
+    "ink": "#241f19",
     "face": "mono",
     "caps": true,
     "width": 16,
     "height": 196,
     "lean": -4.7,
     "depth": -3.1,
-    "wear": 0.18
+    "wear": 0.18,
+    "band": "#009b79"
   },
   {
     "id": "8-rules-of-love-how-to-find-it-66",
@@ -1139,7 +1149,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/13838236-L.jpg",
     "year": 2020,
     "blurb": "The Mountain Is You: Transforming Self-Sabotage Into Self-Mastery by Brianna Wiest.",
     "rating": 4.0,
@@ -1147,7 +1157,7 @@ export const books: Book[] = [
     "publisher": "Thought Catalog Books",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#633a35",
+    "spine": "#050102",
     "ink": "#faf7f0",
     "face": "mono",
     "caps": true,
@@ -1155,7 +1165,8 @@ export const books: Book[] = [
     "height": 202,
     "lean": -1.7,
     "depth": 3.5,
-    "wear": 0.06
+    "wear": 0.06,
+    "band": "#e4cb6f"
   },
   {
     "id": "greenlights-85",
@@ -1764,7 +1775,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/12377851-L.jpg",
     "year": 2016,
     "blurb": "Rich Habits Poor Habits: Discover why the rich keep getting richer and how you can join their ranks by Tom Corley.",
     "rating": 4.0,
@@ -1772,15 +1783,16 @@ export const books: Book[] = [
     "publisher": "Wilkinson Publishing",
     "binding": "paperback",
     "finish": "gloss",
-    "spine": "#635e35",
-    "ink": "#faf7f0",
+    "spine": "#9ba4b9",
+    "ink": "#241f19",
     "face": "sans",
     "caps": false,
     "width": 16,
     "height": 228,
     "lean": -3.6,
     "depth": -1.4,
-    "wear": 0.17
+    "wear": 0.17,
+    "band": "#9f0817"
   },
   {
     "id": "sapiens-a-brief-history-of-hum-91",
@@ -1789,7 +1801,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/8634250-L.jpg",
     "year": 2011,
     "blurb": "Sapiens: A Brief History of Humankind by Yuval Noah Harari.",
     "rating": 2.0,
@@ -1797,15 +1809,16 @@ export const books: Book[] = [
     "publisher": "Vintage",
     "binding": "hardcover",
     "finish": "cloth",
-    "spine": "#355f63",
-    "ink": "#faf7f0",
+    "spine": "#fdf7f5",
+    "ink": "#241f19",
     "face": "sans",
     "caps": false,
     "width": 30,
     "height": 246,
     "lean": -4.2,
     "depth": 0.1,
-    "wear": 0.05
+    "wear": 0.05,
+    "band": "#db2d00"
   },
   {
     "id": "attached-the-new-science-of-ad-70",
@@ -1891,7 +1904,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/10389354-L.jpg",
     "year": 2020,
     "blurb": "The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness by Morgan Housel.",
     "rating": 4.0,
@@ -1899,15 +1912,16 @@ export const books: Book[] = [
     "publisher": "Harriman House",
     "binding": "mass",
     "finish": "matte",
-    "spine": "#633538",
-    "ink": "#faf7f0",
+    "spine": "#edf3ee",
+    "ink": "#241f19",
     "face": "serif",
     "caps": false,
     "width": 16,
     "height": 207,
     "lean": -3.3,
     "depth": -3.5,
-    "wear": 0.32
+    "wear": 0.32,
+    "band": "#faea26"
   },
   {
     "id": "poor-charlie-s-almanack-the-wi-61",
@@ -2020,7 +2034,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/8788773-L.jpg",
     "year": 2019,
     "blurb": "The Ride of a Lifetime: Lessons Learned from 15 Years as CEO of the Walt Disney Company by Robert Iger.",
     "rating": 5.0,
@@ -2028,7 +2042,7 @@ export const books: Book[] = [
     "publisher": "Random House",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#633535",
+    "spine": "#767676",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": true,
@@ -2036,7 +2050,8 @@ export const books: Book[] = [
     "height": 222,
     "lean": -0.8,
     "depth": -4.0,
-    "wear": 0.0
+    "wear": 0.0,
+    "band": "#f1c873"
   },
   {
     "id": "principles-life-and-work-10",
@@ -2122,7 +2137,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/12539702-L.jpg",
     "year": 2018,
     "blurb": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones by James Clear.",
     "rating": 5.0,
@@ -2130,15 +2145,16 @@ export const books: Book[] = [
     "publisher": "Avery",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#353863",
-    "ink": "#faf7f0",
+    "spine": "#eee6e0",
+    "ink": "#241f19",
     "face": "serif",
     "caps": false,
     "width": 20,
     "height": 214,
     "lean": -3.3,
     "depth": 6.7,
-    "wear": 0.2
+    "wear": 0.2,
+    "band": "#d08b52"
   },
   {
     "id": "elon-musk-tesla-spacex-and-the-82",
@@ -2356,7 +2372,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/15158660-L.jpg",
     "year": 2007,
     "blurb": "Harry Potter and the Deathly Hallows (Harry Potter, #7) by J.K. Rowling.",
     "rating": 5.0,
@@ -2364,7 +2380,7 @@ export const books: Book[] = [
     "publisher": "Arthur A. Levine Books",
     "binding": "hardcover",
     "finish": "cloth",
-    "spine": "#63354c",
+    "spine": "#3b2926",
     "ink": "#faf7f0",
     "face": "mono",
     "caps": true,
@@ -2372,7 +2388,8 @@ export const books: Book[] = [
     "height": 243,
     "lean": -1.1,
     "depth": 2.0,
-    "wear": 0.06
+    "wear": 0.06,
+    "band": "#711228"
   },
   {
     "id": "billion-dollar-whale-the-man-w-60",
@@ -2509,7 +2526,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/10716273-L.jpg",
     "year": 2005,
     "blurb": "Harry Potter and the Half-Blood Prince (Harry Potter, #6) by J.K. Rowling.",
     "rating": 5.0,
@@ -2517,7 +2534,7 @@ export const books: Book[] = [
     "publisher": "Scholastic Inc",
     "binding": "hardcover",
     "finish": "cloth",
-    "spine": "#413563",
+    "spine": "#6c4944",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": false,
@@ -2525,7 +2542,8 @@ export const books: Book[] = [
     "height": 248,
     "lean": -3.1,
     "depth": 3.0,
-    "wear": 0.04
+    "wear": 0.04,
+    "band": "#840009"
   },
   {
     "id": "chaos-monkeys-obscene-fortune-37",
@@ -2560,7 +2578,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/746414-L.jpg",
     "year": 2006,
     "blurb": "Mindset: The New Psychology of Success by Carol S. Dweck.",
     "rating": 3.0,
@@ -2568,15 +2586,16 @@ export const books: Book[] = [
     "publisher": "Random House",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#353863",
-    "ink": "#faf7f0",
+    "spine": "#c5c5c5",
+    "ink": "#241f19",
     "face": "serif",
     "caps": false,
     "width": 16,
     "height": 228,
     "lean": -3.6,
     "depth": -5.9,
-    "wear": 0.2
+    "wear": 0.2,
+    "band": "#be5e31"
   },
   {
     "id": "harry-potter-and-the-order-of-89",
@@ -2585,7 +2604,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/15158666-L.jpg",
     "year": 2003,
     "blurb": "Harry Potter and the Order of the Phoenix (Harry Potter, #5) by J.K. Rowling.",
     "rating": 4.0,
@@ -2593,7 +2612,7 @@ export const books: Book[] = [
     "publisher": "Scholastic Inc.",
     "binding": "hardcover",
     "finish": "cloth",
-    "spine": "#633547",
+    "spine": "#6f5732",
     "ink": "#faf7f0",
     "face": "sans",
     "caps": false,
@@ -2601,7 +2620,8 @@ export const books: Book[] = [
     "height": 247,
     "lean": -0.7,
     "depth": -6.6,
-    "wear": 0.13
+    "wear": 0.13,
+    "band": "#0b539c"
   },
   {
     "id": "the-code-silicon-valley-and-th-24",
@@ -2610,7 +2630,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/9401824-L.jpg",
     "year": 2019,
     "blurb": "The Code: Silicon Valley and the Remaking of America by Margaret O'Mara.",
     "rating": 0.0,
@@ -2618,7 +2638,7 @@ export const books: Book[] = [
     "publisher": "Penguin Books",
     "binding": "hardcover",
     "finish": "cloth",
-    "spine": "#356339",
+    "spine": "#2a5d98",
     "ink": "#faf7f0",
     "face": "sans",
     "caps": false,
@@ -2626,7 +2646,8 @@ export const books: Book[] = [
     "height": 251,
     "lean": -1.8,
     "depth": -1.1,
-    "wear": 0.17
+    "wear": 0.17,
+    "band": "#093c78"
   },
   {
     "id": "i-may-be-wrong-and-other-wisdo-40",
@@ -2686,7 +2707,7 @@ export const books: Book[] = [
     "genres": [
       "Fiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/8235363-L.jpg",
     "year": 1847,
     "blurb": "Jane Eyre by Charlotte Brontë.",
     "rating": 0.0,
@@ -2694,7 +2715,7 @@ export const books: Book[] = [
     "publisher": "",
     "binding": "paperback",
     "finish": "matte",
-    "spine": "#386335",
+    "spine": "#a36f42",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": false,
@@ -2702,7 +2723,8 @@ export const books: Book[] = [
     "height": 221,
     "lean": -0.9,
     "depth": -6.5,
-    "wear": 0.08
+    "wear": 0.08,
+    "band": "#965824"
   },
   {
     "id": "you-are-a-badass-how-to-stop-d-45",
@@ -3053,7 +3075,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/15158664-L.jpg",
     "year": 1998,
     "blurb": "Harry Potter and the Chamber of Secrets (Harry Potter, #2) by J.K. Rowling.",
     "rating": 5.0,
@@ -3061,7 +3083,7 @@ export const books: Book[] = [
     "publisher": "Arthur A. Levine Books",
     "binding": "paperback",
     "finish": "gloss",
-    "spine": "#3c6335",
+    "spine": "#7883a4",
     "ink": "#faf7f0",
     "face": "serif",
     "caps": true,
@@ -3069,7 +3091,8 @@ export const books: Book[] = [
     "height": 221,
     "lean": -2.6,
     "depth": 5.6,
-    "wear": 0.03
+    "wear": 0.03,
+    "band": "#6faff5"
   },
   {
     "id": "harry-potter-e-a-pedra-filosof-14",
