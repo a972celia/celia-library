@@ -66,8 +66,9 @@ export function Shelf({ books, justAdded = null }: Props) {
     const scroller = scrollerRef.current;
     if (!scroller) return;
     if (copies === 3) scroller.scrollLeft = scroller.scrollWidth / 3;
+    measure();
     curve();
-  }, [copies, curve, books.length]);
+  }, [copies, curve, measure, books.length]);
 
   useEffect(() => {
     const scroller = scrollerRef.current;
