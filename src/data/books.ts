@@ -552,7 +552,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780062888433-L.jpg",
     "year": 2019,
     "blurb": "Everything is Fucked. Ein Buch über Hoffnung by Mark Manson.",
     "rating": 3.0,
@@ -2086,7 +2086,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/12735651-L.jpg",
     "year": 2018,
     "blurb": "Bad Blood: Secrets and Lies in a Silicon Valley Startup by John Carreyrou.",
     "rating": 4.0,
@@ -2656,7 +2656,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/13731501-L.jpg",
     "year": 2020,
     "blurb": "I May Be Wrong: And Other Wisdoms From Life as a Forest Monk by Björn Natthiko Lindeblad.",
     "rating": 0.0,
