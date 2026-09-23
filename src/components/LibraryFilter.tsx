@@ -12,6 +12,7 @@ export function LibraryFilter({ books, onChange }: Props) {
   const search = useServerFn(smartSearch);
   const [query, setQuery] = useState("");
   const [genre, setGenre] = useState<string | null>(null);
+  const [year, setYear] = useState<string | null>(null);
   const [ids, setIds] = useState<string[] | null>(null);
   const [status, setStatus] = useState<string>("");
   const reqId = useRef(0);
@@ -20,6 +21,15 @@ export function LibraryFilter({ books, onChange }: Props) {
     const counts = new Map<string, number>();
     books.forEach((b) => (b.genres ?? []).forEach((g) => counts.set(g, (counts.get(g) ?? 0) + 1)));
     return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([g]) => g);
+  }, [books]);
+
+  const years = useMemo(() => {
+    const counts = new Map<string, number>();
+    books.forEach((b) => {
+      const y = readYear(b);
+      if (y) counts.set(y, (counts.get(y) ?? 0) + 1);
+    });
+    return [...counts.entries()].sort((a, b) => Number(b[0]) - Number(a[0]));
   }, [books]);
 
   useEffect(() => {
