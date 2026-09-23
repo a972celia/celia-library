@@ -54,8 +54,13 @@ export function Shelf({ books, justAdded = null }: Props) {
       if (first < 0) first = i;
       last = i;
       const t = Math.max(-1, Math.min(1, d / half));
-      const ry = -Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34;
-      g.els[i]!.style.setProperty("--ry", `${ry}deg`);
+      // round to 1 degree so we don't repaint for invisible differences
+      const ry = Math.round(-Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34);
+      const el = g.els[i]!;
+      if (el.dataset["ry"] !== String(ry)) {
+        el.dataset["ry"] = String(ry);
+        el.style.setProperty("--ry", `${ry}deg`);
+      }
     }
     if (first >= 0) {
       setRange((r) => (Math.abs(r.s - first) > 4 || Math.abs(r.e - last) > 4 ? { s: first, e: last } : r));
