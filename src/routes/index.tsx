@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useCallback, useState } from "react";
 import { books, type Book } from "@/data/books";
+import { toRead } from "@/data/toRead";
 import { Shelf } from "@/components/Shelf";
 import { TypedTitle } from "@/components/TypedTitle";
 import { LibraryFilter } from "@/components/LibraryFilter";
@@ -73,6 +74,13 @@ function Index() {
           </p>
         )}
       </main>
+
+      <section className="relative z-10 pb-4">
+        <p className="pt-2 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+          Still to read · {toRead.length}
+        </p>
+        <Shelf books={toRead} />
+      </section>
 
       {recommendations.length ? (
         <section className="relative z-10 pb-16">
