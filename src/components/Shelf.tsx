@@ -188,7 +188,19 @@ export function Shelf({ books, justAdded = null }: Props) {
                 } as React.CSSProperties
               }
             >
-              <BookSpine book={book} onOpen={(el) => openAt(i, el)} />
+              {i >= range.s - 6 && i <= range.e + 6 ? (
+                <BookSpine book={book} onOpen={(el) => openAt(i, el)} />
+              ) : (
+                <div
+                  aria-hidden="true"
+                  style={{
+                    width: book.width,
+                    height: book.height,
+                    backgroundColor: book.spine,
+                    borderRadius: 2,
+                  }}
+                />
+              )}
             </div>
           ))}
         </div>
