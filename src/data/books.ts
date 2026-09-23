@@ -139,7 +139,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/15070895-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780679720201-L.jpg",
     "year": 1942,
     "blurb": "The Stranger by Albert Camus.",
     "rating": 4.0,
@@ -293,7 +293,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/6426475-L.jpg",
+    "cover": "",
     "year": 2025,
     "blurb": "The Opposite of Settling: How to Get Everything You Want Out of Love and Life Without Losing Your Spark by Case Kenny.",
     "rating": 4.0,
@@ -371,7 +371,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/15165806-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/isbn/9781401971366-L.jpg",
     "year": 2024,
     "blurb": "What if the key to happiness, success, and love was as simple as two words? If you've ever felt stuck, overwhelmed, or frustrated with where you are, the problem isn't you. The problem is the power you give to other people. Two simple words—Let Them—will set you free. Free from the opinions, drama, and judgments of others. Free from the exhausting cycle of trying to manage everything and everyone around you. The Let Them Theory puts the power to create a life you love back in your hands—and this book will show you ",
     "rating": 5.0,
@@ -552,7 +552,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780062888433-L.jpg",
     "year": 2019,
     "blurb": "Everything is Fucked. Ein Buch über Hoffnung by Mark Manson.",
     "rating": 3.0,
@@ -784,7 +784,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/15240641-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/id/8843009-L.jpg",
     "year": 2017,
     "blurb": "\"An urgent and expert investigation into behavioral addiction, the dark flipside of today's unavoidable digital technologies, and how we can turn the tide to regain control. Behavioral addiction may prove to be one of the most important fields of social, medical, and psychological research in our lifetime. The idea that behaviors can be being addictive is new, but the threat is near universal. Experts are just beginning to acknowledge that we are all potential addicts. Adam Alter, a professor of psychology and mark",
     "rating": 3.0,
@@ -1123,7 +1123,7 @@ export const books: Book[] = [
     "genres": [
       "Fiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/8199499-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780451499066-L.jpg",
     "year": 2017,
     "blurb": "Frances is a coolheaded and darkly observant young woman, vaguely pursuing a career in writing while studying in Dublin. Her best friend is the beautiful and endlessly self-possessed Bobbi. At a local poetry performance one night, they meet a well-known photographer, and as the girls are then gradually drawn into her world, Frances is reluctantly impressed by the older woman’s sophisticated home and handsome husband, Nick. But however amusing Frances and Nick’s flirtation seems at first, it begins to give way to a ",
     "rating": 4.0,
@@ -2086,7 +2086,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/12735651-L.jpg",
     "year": 2018,
     "blurb": "Bad Blood: Secrets and Lies in a Silicon Valley Startup by John Carreyrou.",
     "rating": 4.0,
@@ -2656,7 +2656,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": "https://covers.openlibrary.org/b/id/13731501-L.jpg",
     "year": 2020,
     "blurb": "I May Be Wrong: And Other Wisdoms From Life as a Forest Monk by Björn Natthiko Lindeblad.",
     "rating": 0.0,
@@ -2707,7 +2707,7 @@ export const books: Book[] = [
     "genres": [
       "Fiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/8235363-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/isbn/9780141441146-L.jpg",
     "year": 1847,
     "blurb": "Jane Eyre by Charlotte Brontë.",
     "rating": 0.0,
