@@ -293,7 +293,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": null,
+    "cover": "",
     "year": 2025,
     "blurb": "The Opposite of Settling: How to Get Everything You Want Out of Love and Life Without Losing Your Spark by Case Kenny.",
     "rating": 4.0,
