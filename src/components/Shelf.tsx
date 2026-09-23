@@ -106,12 +106,13 @@ export function Shelf({ books, justAdded = null }: Props) {
     if (!row || !scroller) return;
     const ro = new ResizeObserver(() => {
       setOverflowing(row.scrollWidth > scroller.clientWidth + 4);
+      measure();
       curve();
     });
     ro.observe(row);
     ro.observe(scroller);
     return () => ro.disconnect();
-  }, [curve]);
+  }, [curve, measure]);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
