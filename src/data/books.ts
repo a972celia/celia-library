@@ -165,7 +165,7 @@ export const books: Book[] = [
     "genres": [
       "Fiction"
     ],
-    "cover": "https://covers.openlibrary.org/b/id/12019989-L.jpg",
+    "cover": "https://covers.openlibrary.org/b/id/14809692-L.jpg",
     "year": 2022,
     "blurb": "After Tova Sullivan's husband died, she began working the night cleaner shift at the Sowell Bay Aquarium. Ever since her eighteen-year-old son, Erik, mysteriously vanished on a boat over thirty years ago keeping busy has helped her cope. One night she meets Marcellus, a giant Pacific octopus living at the aquarium who sees everything, but wouldn't dream of lifting one of his eight arms for his human captors – until he forms a remarkable friendship with Tova. Ever the detective, Marcellus deduces what happened the n",
     "rating": 5.0,

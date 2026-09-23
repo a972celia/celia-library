@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Book } from "@/data/books";
+import { Button } from "@/components/ui/button";
 import { BookSpine } from "./BookSpine";
 import { BookDetail, type SpineRect } from "./BookDetail";
 
@@ -15,6 +17,12 @@ export function Shelf({ books, justAdded = null }: Props) {
   const rowRef = useRef<HTMLDivElement>(null);
   const [overflowing, setOverflowing] = useState(false);
   const [open, setOpen] = useState<{ index: number; rect: SpineRect } | null>(null);
+
+  const scrollShelf = useCallback((direction: -1 | 1) => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    scroller.scrollBy({ left: direction * Math.max(420, scroller.clientWidth * 0.72), behavior: "smooth" });
+  }, []);
 
   const totalWidth = books.reduce((a, b) => a + b.width + 2, 0);
   const copies = totalWidth > LOOP_THRESHOLD ? 3 : 1;
@@ -57,7 +65,7 @@ export function Shelf({ books, justAdded = null }: Props) {
     const onWheel = (e: WheelEvent) => {
       if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
         e.preventDefault();
-        scroller.scrollLeft += e.deltaY;
+        scroller.scrollLeft += e.deltaY * 1.65;
       }
     };
 
@@ -160,6 +168,28 @@ export function Shelf({ books, justAdded = null }: Props) {
         <>
           <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            aria-label="Scroll shelf left"
+            title="Scroll shelf left"
+            onClick={() => scrollShelf(-1)}
+            className="absolute left-3 top-1/2 z-20 size-11 -translate-y-1/2 rounded-full border-foreground/20 bg-background/90 shadow-md backdrop-blur-sm hover:bg-background"
+          >
+            <ChevronLeft className="size-5" aria-hidden="true" />
+          </Button>
+          <Button
+            type="button"
+            variant="outline"
+            size="icon"
+            aria-label="Scroll shelf right"
+            title="Scroll shelf right"
+            onClick={() => scrollShelf(1)}
+            className="absolute right-3 top-1/2 z-20 size-11 -translate-y-1/2 rounded-full border-foreground/20 bg-background/90 shadow-md backdrop-blur-sm hover:bg-background"
+          >
+            <ChevronRight className="size-5" aria-hidden="true" />
+          </Button>
         </>
       ) : null}
 

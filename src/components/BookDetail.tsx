@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import type { Book } from "@/data/books";
 import { COVER_W, faceFont } from "./bookFaces";
 
@@ -48,7 +49,7 @@ export function BookDetail({ books, index, rect, onIndex, onClose }: Props) {
   const dx = targetLeft - rect.left;
   const dy = targetTop - rect.top;
 
-  return (
+  const detail = (
     <div className="fixed inset-0 z-[120]">
       <button
         type="button"
@@ -161,4 +162,6 @@ export function BookDetail({ books, index, rect, onIndex, onClose }: Props) {
       </div>
     </div>
   );
+
+  return createPortal(detail, document.body);
 }
