@@ -82,16 +82,15 @@ export function BookDetail({ books, index, rect, onIndex, onClose }: Props) {
           }}
         >
           <div
-            className="absolute top-0 left-full h-full overflow-hidden shadow-2xl"
+            className="absolute top-0 left-full h-full shadow-2xl"
             style={{
-              width: COVER_W,
               transformOrigin: "left center",
               transform: "rotateY(90deg)",
-              backgroundColor: book.spine,
+              ...(book.cover ? {} : { width: COVER_W, backgroundColor: book.spine }),
             }}
           >
             {book.cover ? (
-              <img src={book.cover} alt={`${book.title} cover`} className="h-full w-full object-contain" />
+              <img src={book.cover} alt={`${book.title} cover`} className="block h-full w-auto max-w-none" />
             ) : (
               <div
                 className={`flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center ${faceFont[book.face]}`}
