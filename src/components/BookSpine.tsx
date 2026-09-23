@@ -80,7 +80,7 @@ export function BookSpine({ book, onOpen }: Props) {
               <span
                 className="absolute inset-0 opacity-70"
                 style={{
-                  backgroundImage: `url(${book.cover})`,
+                  backgroundImage: `url(${thumb})`,
                   backgroundSize: "auto 100%",
                   backgroundPosition: "left center",
                   filter: "saturate(0.9)",
@@ -178,7 +178,7 @@ export function BookSpine({ book, onOpen }: Props) {
               transformOrigin: "left center",
               transform: "rotateY(90deg)",
               backgroundColor: book.spine,
-              backgroundImage: book.cover ? `url(${book.cover})` : undefined,
+              backgroundImage: book.cover ? `url(${thumb})` : undefined,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
