@@ -45,12 +45,19 @@ export function Shelf({ books, justAdded = null }: Props) {
     if (!scroller || !g) return;
     const half = scroller.clientWidth / 2;
     const center = scroller.scrollLeft + half;
+    let first = -1;
+    let last = -1;
     for (let i = 0; i < g.els.length; i++) {
       const d = g.mid[i]! - center;
-      if (Math.abs(d) > half + 240) continue; // offscreen: skip
+      if (Math.abs(d) > half + 400) continue; // offscreen: skip
+      if (first < 0) first = i;
+      last = i;
       const t = Math.max(-1, Math.min(1, d / half));
       const ry = -Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34;
       g.els[i]!.style.setProperty("--ry", `${ry}deg`);
+    }
+    if (first >= 0) {
+      setRange((r) => (Math.abs(r.s - first) > 4 || Math.abs(r.e - last) > 4 ? { s: first, e: last } : r));
     }
   }, []);
 
