@@ -154,7 +154,7 @@ export function BookSpine({ book, onOpen }: Props) {
 
           {/* page block on top */}
           <span
-            className="absolute left-0 top-0 origin-top"
+            className="pointer-events-none absolute left-0 top-0 origin-top"
             style={{
               width: book.width,
               height: COVER_W,
@@ -170,7 +170,7 @@ export function BookSpine({ book, onOpen }: Props) {
 
           {/* hinged front cover */}
           <span
-            className="absolute top-0 left-full h-full overflow-hidden"
+            className="pointer-events-none absolute top-0 left-full h-full overflow-hidden"
             style={{
               width: COVER_W,
               transformOrigin: "left center",
