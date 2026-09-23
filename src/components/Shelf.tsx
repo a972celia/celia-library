@@ -1,0 +1,180 @@
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import type { Book } from "@/data/books";
+import { BookSpine } from "./BookSpine";
+import { BookDetail, type SpineRect } from "./BookDetail";
+
+type Props = {
+  books: Book[];
+  justAdded?: string | null;
+};
+
+const LOOP_THRESHOLD = 2600;
+
+export function Shelf({ books, justAdded = null }: Props) {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const rowRef = useRef<HTMLDivElement>(null);
+  const [overflowing, setOverflowing] = useState(false);
+  const [open, setOpen] = useState<{ index: number; rect: SpineRect } | null>(null);
+
+  const totalWidth = books.reduce((a, b) => a + b.width + 2, 0);
+  const copies = totalWidth > LOOP_THRESHOLD ? 3 : 1;
+  const rendered = copies === 3 ? [...books, ...books, ...books] : books;
+
+  const curve = useCallback(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    const rect = scroller.getBoundingClientRect();
+    const center = rect.left + rect.width / 2;
+    const spines = scroller.querySelectorAll<HTMLElement>("[data-spine]");
+    spines.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      const t = Math.max(-1, Math.min(1, (r.left + r.width / 2 - center) / (rect.width / 2)));
+      const ry = -Math.sign(t) * Math.pow(Math.abs(t), 1.35) * 34;
+      el.style.setProperty("--ry", `${ry}deg`);
+    });
+  }, []);
+
+  useLayoutEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    if (copies === 3) scroller.scrollLeft = scroller.scrollWidth / 3;
+    curve();
+  }, [copies, curve, books.length]);
+
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+
+    const onScroll = () => {
+      if (copies === 3) {
+        const seg = scroller.scrollWidth / 3;
+        if (scroller.scrollLeft < seg * 0.5) scroller.scrollLeft += seg;
+        else if (scroller.scrollLeft > seg * 1.5) scroller.scrollLeft -= seg;
+      }
+      curve();
+    };
+
+    const onWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        scroller.scrollLeft += e.deltaY;
+      }
+    };
+
+    scroller.addEventListener("scroll", onScroll, { passive: true });
+    scroller.addEventListener("wheel", onWheel, { passive: false });
+    window.addEventListener("resize", curve);
+    return () => {
+      scroller.removeEventListener("scroll", onScroll);
+      scroller.removeEventListener("wheel", onWheel);
+      window.removeEventListener("resize", curve);
+    };
+  }, [copies, curve]);
+
+  useEffect(() => {
+    const row = rowRef.current;
+    const scroller = scrollerRef.current;
+    if (!row || !scroller) return;
+    const ro = new ResizeObserver(() => {
+      setOverflowing(row.scrollWidth > scroller.clientWidth + 4);
+      curve();
+    });
+    ro.observe(row);
+    ro.observe(scroller);
+    return () => ro.disconnect();
+  }, [curve]);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (open) return;
+      const scroller = scrollerRef.current;
+      if (!scroller) return;
+      if (e.key === "ArrowLeft") scroller.scrollLeft -= 320;
+      if (e.key === "ArrowRight") scroller.scrollLeft += 320;
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  useEffect(() => {
+    if (!justAdded) return;
+    const el = scrollerRef.current?.querySelector<HTMLElement>(`[data-id="${justAdded}"]`);
+    el?.scrollIntoView({ inline: "center", block: "nearest", behavior: "smooth" });
+  }, [justAdded]);
+
+  // drag to scroll
+  const drag = useRef<{ x: number; left: number } | null>(null);
+
+  const openAt = (index: number, el: HTMLElement) => {
+    const r = el.getBoundingClientRect();
+    setOpen({ index: index % books.length, rect: { left: r.left, top: r.top, width: r.width, height: r.height } });
+  };
+
+  return (
+    <div className="relative">
+      <div
+        ref={scrollerRef}
+        className="no-scrollbar overflow-x-auto overflow-y-hidden pt-16 pb-6"
+        style={{ perspective: "1400px", perspectiveOrigin: "50% 65%" }}
+        onPointerDown={(e) => {
+          drag.current = { x: e.clientX, left: scrollerRef.current?.scrollLeft ?? 0 };
+        }}
+        onPointerMove={(e) => {
+          if (!drag.current || !scrollerRef.current) return;
+          if (e.buttons !== 1) return;
+          scrollerRef.current.scrollLeft = drag.current.left - (e.clientX - drag.current.x);
+        }}
+        onPointerUp={() => {
+          drag.current = null;
+        }}
+        onPointerLeave={() => {
+          drag.current = null;
+        }}
+      >
+        <div
+          ref={rowRef}
+          className={`flex items-end gap-[2px] px-10 ${overflowing ? "" : "justify-center"}`}
+          style={{ transformStyle: "preserve-3d", minWidth: overflowing ? "max-content" : "100%" }}
+        >
+          {rendered.map((book, i) => (
+            <div
+              key={`${book.id}-${i}`}
+              data-spine
+              data-id={book.id}
+              className={justAdded === book.id ? "animate-shelve-in" : undefined}
+              style={
+                {
+                  "--ry": "0deg",
+                  "--spine-w": `${book.width}px`,
+                  transformStyle: "preserve-3d",
+                } as React.CSSProperties
+              }
+            >
+              <BookSpine book={book} onOpen={(el) => openAt(i, el)} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {overflowing ? (
+        <>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
+        </>
+      ) : null}
+
+      <div className="mx-10 h-px bg-gradient-to-r from-transparent via-foreground/25 to-transparent" />
+      <div className="mx-10 h-8 bg-gradient-to-b from-foreground/8 to-transparent" />
+
+      {open ? (
+        <BookDetail
+          books={books}
+          index={open.index}
+          rect={open.rect}
+          onIndex={(i) => setOpen((o) => (o ? { ...o, index: i } : o))}
+          onClose={() => setOpen(null)}
+        />
+      ) : null}
+    </div>
+  );
+}
