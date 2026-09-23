@@ -157,7 +157,7 @@ export function BookSpine({ book, onOpen }: Props) {
             className="pointer-events-none absolute left-0 top-0 origin-top"
             style={{
               width: book.width,
-              height: COVER_W,
+              height: 54,
               transform: "rotateX(78deg)",
               background: "linear-gradient(180deg, #efe6d4 0%, #d9ccb4 60%, #c8b99e 100%)",
               transformOrigin: "top center",
