@@ -35,6 +35,8 @@ export function BookSpine({ book, onOpen }: Props) {
     }, 90);
   };
 
+  // shelf spines are tiny — load the small cover variant, not the large one
+  const thumb = book.cover ? book.cover.replace(/-L\.jpg$/, "-M.jpg") : "";
   const lean = hover ? 0 : book.lean;
   const translateZ = (hover ? PULL : 0) + book.depth;
   const translateY = hover ? LIFT : 0;
