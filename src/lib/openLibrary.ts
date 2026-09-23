@@ -18,7 +18,7 @@ export async function searchBooks(q: string, signal?: AbortSignal): Promise<OLRe
     "fields",
     "key,title,author_name,first_publish_year,cover_i,number_of_pages_median,publisher",
   );
-  const res = await fetch(url.toString(), { signal });
+  const res = await fetch(url.toString(), signal ? { signal } : {});
   if (!res.ok) throw new Error("Open Library is not responding.");
   const data = (await res.json()) as { docs?: Array<Record<string, unknown>> };
   return (data.docs ?? [])
@@ -34,7 +34,7 @@ export async function searchBooks(q: string, signal?: AbortSignal): Promise<OLRe
     }));
 }
 
-type Palette = { spine: string; band?: string; ink: string };
+type Palette = { spine: string; band?: string | undefined; ink: string };
 
 const hex = (r: number, g: number, b: number) =>
   "#" + [r, g, b].map((v) => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, "0")).join("");
@@ -119,9 +119,8 @@ export async function buildBook(r: OLResult): Promise<Omit<Book, "id" | "blurb" 
   const height =
     binding === "hardcover" ? 236 + (hv % 19) : binding === "mass" ? 196 + (hv % 15) : 214 + (hv % 17);
   const width = Math.max(16, Math.min(58, Math.round(pages * 0.055 + ((hv % 7) - 3))));
-  const pal = (await readCoverPalette(r.cover)) ?? {
+  const pal: Palette = (await readCoverPalette(r.cover)) ?? {
     spine: `hsl(${hv % 360} 26% 30%)`,
-    band: undefined,
     ink: "#faf7f0",
   };
 
