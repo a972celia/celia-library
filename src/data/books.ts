@@ -33,7 +33,7 @@ export const books: Book[] = [
     "title": "Think Again: The Power of Knowing What You Don't Know",
     "author": "Adam M. Grant",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/10470266-L.jpg",
     "year": 2021,
@@ -314,7 +314,7 @@ export const books: Book[] = [
     "title": "Careless People: A Cautionary Tale of Power, Greed, and Lost Idealism",
     "author": "Sarah Wynn-Williams",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/14852090-L.jpg",
     "year": 2025,
@@ -469,7 +469,7 @@ export const books: Book[] = [
     "title": "The Anxious Generation: How the Great Rewiring of Childhood Caused an Epidemic of Mental Illness",
     "author": "Jonathan Haidt",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/15104803-L.jpg",
     "year": 2024,
@@ -722,7 +722,7 @@ export const books: Book[] = [
     "title": "Elon Musk",
     "author": "Walter Isaacson",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/14420016-L.jpg",
     "year": 2023,
@@ -748,7 +748,7 @@ export const books: Book[] = [
     "title": "The Power of Habit: Why We Do What We Do in Life and Business",
     "author": "Charles Duhigg",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/9078085-L.jpg",
     "year": 2012,
@@ -1085,7 +1085,7 @@ export const books: Book[] = [
     "title": "Grit: The Power of Passion and Perseverance",
     "author": "Angela Duckworth",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/7438753-L.jpg",
     "year": 2016,
@@ -1111,7 +1111,6 @@ export const books: Book[] = [
     "title": "Conversations with Friends",
     "author": "Sally Rooney",
     "genres": [
-      "Romance",
       "Fiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8199499-L.jpg",
@@ -1163,7 +1162,7 @@ export const books: Book[] = [
     "title": "Greenlights",
     "author": "Matthew McConaughey",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/10512439-L.jpg",
     "year": 2020,
@@ -1189,7 +1188,7 @@ export const books: Book[] = [
     "title": "Shoe Dog: A Memoir by the Creator of Nike",
     "author": "Phil Knight",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8858487-L.jpg",
     "year": 2016,
@@ -1215,7 +1214,7 @@ export const books: Book[] = [
     "title": "The Everything Store: Jeff Bezos and the Age of Amazon",
     "author": "Brad Stone",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/7264584-L.jpg",
     "year": 2013,
@@ -1424,7 +1423,7 @@ export const books: Book[] = [
     "title": "The Black Swan: The Impact of the Highly Improbable",
     "author": "Nassim Nicholas Taleb",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/5721840-L.jpg",
     "year": 2007,
@@ -1554,7 +1553,7 @@ export const books: Book[] = [
     "title": "Steve Jobs",
     "author": "Walter Isaacson",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/12374726-L.jpg",
     "year": 2011,
@@ -1710,7 +1709,7 @@ export const books: Book[] = [
     "title": "Flash Boys: A Wall Street Revolt",
     "author": "Michael   Lewis",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8260825-L.jpg",
     "year": 2014,
@@ -1838,7 +1837,7 @@ export const books: Book[] = [
     "title": "The Four: The Hidden DNA of Amazon, Apple, Facebook, and Google",
     "author": "Scott Galloway",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8102776-L.jpg",
     "year": 2017,
@@ -2095,7 +2094,7 @@ export const books: Book[] = [
     "title": "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration",
     "author": "Ed Catmull",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/13124793-L.jpg",
     "year": 2014,
@@ -2146,8 +2145,7 @@ export const books: Book[] = [
     "title": "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
     "author": "Ashlee Vance",
     "genres": [
-      "Sci-Fi",
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8463846-L.jpg",
     "year": 2015,
@@ -2200,7 +2198,7 @@ export const books: Book[] = [
     "title": "An Unquiet Mind: A Memoir of Moods and Madness",
     "author": "Kay Redfield Jamison",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/418470-L.jpg",
     "year": 1995,
@@ -2252,7 +2250,7 @@ export const books: Book[] = [
     "title": "Being Mortal: Medicine and What Matters in the End",
     "author": "Atul Gawande",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8477368-L.jpg",
     "year": 2014,
@@ -2304,7 +2302,7 @@ export const books: Book[] = [
     "title": "Outliers: The Story of Success",
     "author": "Malcolm Gladwell",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/10021591-L.jpg",
     "year": 2008,
@@ -2381,7 +2379,7 @@ export const books: Book[] = [
     "title": "Billion Dollar Whale: The Man Who Fooled Wall Street, Hollywood, and the World",
     "author": "Tom         Wright",
     "genres": [
-      "Mystery & Thriller"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8813060-L.jpg",
     "year": 2018,
@@ -2459,7 +2457,7 @@ export const books: Book[] = [
     "title": "Lost Connections: Uncovering the Real Causes of Depression - and the Unexpected Solutions",
     "author": "Johann Hari",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/8838533-L.jpg",
     "year": 2018,
@@ -2737,7 +2735,7 @@ export const books: Book[] = [
     "title": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
     "author": "Susan Cain",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/7079753-L.jpg",
     "year": 2012,
@@ -2869,7 +2867,7 @@ export const books: Book[] = [
     "title": "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets (Incerto)",
     "author": "Nassim Nicholas Taleb",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/855791-L.jpg",
     "year": 2001,
@@ -3105,7 +3103,7 @@ export const books: Book[] = [
     "title": "Lean In: Women, Work, and the Will to Lead",
     "author": "Sheryl Sandberg",
     "genres": [
-      "Fiction"
+      "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/7254305-L.jpg",
     "year": 2013,
