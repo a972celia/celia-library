@@ -8,10 +8,16 @@ type Props = {
   onChange: (visible: Book[] | null) => void;
 };
 
+function readYear(book: Book): string | null {
+  const m = /(\d{4})/.exec(book.finished ?? "");
+  return m ? m[1]! : null;
+}
+
 export function LibraryFilter({ books, onChange }: Props) {
   const search = useServerFn(smartSearch);
   const [query, setQuery] = useState("");
   const [genre, setGenre] = useState<string | null>(null);
+  const [year, setYear] = useState<string | null>(null);
   const [ids, setIds] = useState<string[] | null>(null);
   const [status, setStatus] = useState<string>("");
   const reqId = useRef(0);
@@ -20,6 +26,15 @@ export function LibraryFilter({ books, onChange }: Props) {
     const counts = new Map<string, number>();
     books.forEach((b) => (b.genres ?? []).forEach((g) => counts.set(g, (counts.get(g) ?? 0) + 1)));
     return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([g]) => g);
+  }, [books]);
+
+  const years = useMemo(() => {
+    const counts = new Map<string, number>();
+    books.forEach((b) => {
+      const y = readYear(b);
+      if (y) counts.set(y, (counts.get(y) ?? 0) + 1);
+    });
+    return [...counts.entries()].sort((a, b) => Number(b[0]) - Number(a[0]));
   }, [books]);
 
   useEffect(() => {
@@ -53,8 +68,9 @@ export function LibraryFilter({ books, onChange }: Props) {
       list = books.filter((b) => rank.has(b.id)).sort((a, b) => rank.get(a.id)! - rank.get(b.id)!);
     }
     if (genre) list = list.filter((b) => (b.genres ?? []).includes(genre));
-    onChange(!ids && !genre ? null : list);
-  }, [ids, genre, books, onChange]);
+    if (year) list = list.filter((b) => readYear(b) === year);
+    onChange(!ids && !genre && !year ? null : list);
+  }, [ids, genre, year, books, onChange]);
 
   return (
     <div className="mt-8 w-full max-w-2xl">
@@ -99,6 +115,44 @@ export function LibraryFilter({ books, onChange }: Props) {
           </button>
         ))}
       </div>
+
+      {years.length ? (
+        <div className="mt-6">
+          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Year read</p>
+          <div className="no-scrollbar relative mt-3 flex items-end gap-5 overflow-x-auto pb-1 whitespace-nowrap">
+            <span className="pointer-events-none absolute bottom-[7px] left-0 right-0 h-px bg-border" />
+            <button
+              type="button"
+              onClick={() => setYear(null)}
+              className={`relative shrink-0 font-mono text-[10px] uppercase tracking-widest transition-colors ${
+                year === null ? "text-primary" : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              All
+              <span
+                className={`mx-auto mt-2 block size-[7px] rounded-full ${year === null ? "bg-primary" : "bg-border"}`}
+              />
+            </button>
+            {years.map(([y, n]) => (
+              <button
+                key={y}
+                type="button"
+                onClick={() => setYear(year === y ? null : y)}
+                title={`${n} book${n === 1 ? "" : "s"}`}
+                className={`relative shrink-0 font-mono text-[10px] uppercase tracking-widest transition-colors ${
+                  year === y ? "text-primary" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {y}
+                <span className="ml-1 opacity-60">{n}</span>
+                <span
+                  className={`mx-auto mt-2 block size-[7px] rounded-full ${year === y ? "bg-primary" : "bg-border"}`}
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
