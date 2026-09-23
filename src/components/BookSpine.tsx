@@ -83,7 +83,6 @@ export function BookSpine({ book, onOpen }: Props) {
                   backgroundImage: `url(${thumb})`,
                   backgroundSize: "auto 100%",
                   backgroundPosition: "left center",
-                  filter: "saturate(0.9)",
                 }}
               />
             ) : null}
