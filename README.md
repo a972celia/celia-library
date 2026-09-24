@@ -1,18 +1,20 @@
-# Welcome to your Lovable project
+# Celia's Virtual Library
 
-This project was built with [Lovable](https://lovable.dev).
+Turn my Goodreads into an interactive library.
 
-## Build with Lovable
+![Celia's virtual library](docs/screenshot.png)
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+A 3D bookshelf built from a Goodreads export — hover a spine to peek at a book, click to pull it out, and browse everything you've read (or plan to read) with plain-English search, genre filters, and a year-read timeline.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+## Features
+
+- **3D shelves** — 120 read/currently-reading books plus a "Still to read" shelf, with physical props (width, lean, wear) derived from each book's page count
+- **Book detail** — click any spine to pull the book out and flip it open, with cover, blurb and rating; navigate with ←/→
+- **Plain-English search** — AI-powered search across titles, authors, years and blurbs
+- **Filters** — genre pills and a year-read timeline
+- **Recommend a book** — anyone can add a book to a "Recommended to me" shelf via Open Library
 
 ## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
 git clone <this-repository-url>
