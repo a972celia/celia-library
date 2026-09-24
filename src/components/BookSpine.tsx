@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import type { Book } from "@/data/books";
-import { COVER_W, faceFont, finishSheen, textureImage } from "./bookFaces";
+import { COVER_W, faceFont, finishSheen } from "./bookFaces";
 
 const PULL = 96;
 const LIFT = -26;
@@ -65,7 +65,7 @@ export function BookSpine({ book, onOpen }: Props) {
           style={{
             transformStyle: "preserve-3d",
             transformOrigin: "bottom center",
-            transform: `rotateY(var(--ry, 0deg)) rotateZ(${lean}deg) translateZ(${translateZ}px) translateY(${translateY}px)`,
+            transform: `rotateZ(${lean}deg) translateZ(${translateZ}px) translateY(${translateY}px)`,
           }}
         >
           {/* spine face */}
@@ -73,20 +73,8 @@ export function BookSpine({ book, onOpen }: Props) {
             className="absolute inset-0 overflow-hidden rounded-[2px]"
             style={{
               backgroundColor: book.spine,
-              boxShadow: "0 18px 26px -18px rgba(40,30,20,0.55)",
             }}
           >
-            {book.cover ? (
-              <span
-                className="absolute inset-0 opacity-70"
-                style={{
-                  backgroundImage: `url(${thumb})`,
-                  backgroundSize: "auto 100%",
-                  backgroundPosition: "left center",
-                }}
-              />
-            ) : null}
-            <span className="absolute inset-0" style={{ backgroundColor: book.spine, opacity: 0.74 }} />
 
             {book.band ? (
               <>
@@ -134,10 +122,6 @@ export function BookSpine({ book, onOpen }: Props) {
               </span>
             ) : null}
 
-            <span
-              className="absolute inset-0 opacity-25 mix-blend-overlay"
-              style={{ backgroundImage: textureImage }}
-            />
             <span className="absolute inset-0" style={{ backgroundImage: finishSheen[book.finish] }} />
             <span
               className="absolute inset-0"

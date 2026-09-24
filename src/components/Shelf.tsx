@@ -50,7 +50,7 @@ export function Shelf({ books, justAdded = null }: Props) {
     let last = -1;
     for (let i = 0; i < g.els.length; i++) {
       const d = g.mid[i]! - center;
-      if (Math.abs(d) > half + 400) continue; // offscreen: skip
+      if (Math.abs(d) > half + 200) continue; // offscreen: skip
       if (first < 0) first = i;
       last = i;
       const t = Math.max(-1, Math.min(1, d / half));
@@ -59,7 +59,7 @@ export function Shelf({ books, justAdded = null }: Props) {
       const el = g.els[i]!;
       if (el.dataset["ry"] !== String(ry)) {
         el.dataset["ry"] = String(ry);
-        el.style.setProperty("--ry", `${ry}deg`);
+        el.style.transform = `rotateY(${ry}deg)`;
       }
     }
     if (first >= 0) {
@@ -193,7 +193,7 @@ export function Shelf({ books, justAdded = null }: Props) {
                 } as React.CSSProperties
               }
             >
-              {i >= range.s - 6 && i <= range.e + 6 ? (
+              {i >= range.s - 3 && i <= range.e + 3 ? (
                 <BookSpine book={book} onOpen={(el) => openAt(i, el)} />
               ) : (
                 <div
