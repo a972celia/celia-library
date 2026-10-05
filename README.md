@@ -1,6 +1,6 @@
 # Celia's Virtual Library
 
-Turn my Goodreads into an interactive library. [https://celia-library.lovable.app](https://celia-library.lovable.app)
+Turn my Goodreads into an interactive [library.] (https://celia-library.lovable.app)
 
 ![Celia's virtual library](docs/screenshot.png)
 
