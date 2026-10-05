@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -97,7 +98,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
-  errorComponent: ErrorComponent,
+  // The router now types this option as a lazy component; the plain function
+  // below renders the same, so assert the shape.
+  errorComponent: ErrorComponent as unknown as React.LazyExoticComponent<
+    (props: ErrorComponentProps) => React.ReactElement
+  >,
 });
 
 function RootShell({ children }: { children: ReactNode }) {
