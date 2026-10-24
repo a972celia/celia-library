@@ -1,4 +1,6 @@
 // Generated from goodreads_library_export-2.csv — real library data.
+import midnightTrainCover from "@/assets/midnight-train-goodreads.asset.json";
+import streetwiseCover from "@/assets/streetwise-goodreads.asset.json";
 
 export type Book = {
   id: string;
@@ -279,7 +281,7 @@ export const books: Book[] = [
     "genres": [
       "Fiction"
     ],
-    "cover": "",
+    "cover": midnightTrainCover.url,
     "year": 2026,
     "blurb": "The Midnight Train (The Midnight World, #2) by Matt Haig.",
     "rating": 4.0,
@@ -305,7 +307,7 @@ export const books: Book[] = [
     "genres": [
       "Nonfiction"
     ],
-    "cover": "",
+    "cover": streetwiseCover.url,
     "year": 2026,
     "blurb": "Streetwise: Getting to and Through Goldman Sachs by Lloyd Blankfein.",
     "rating": 4.0,
