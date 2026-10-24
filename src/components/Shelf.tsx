@@ -246,10 +246,10 @@ export function Shelf({ books, justAdded = null }: Props) {
 
       {open ? (
         <BookDetail
+          book={open.book}
           books={books}
-          index={open.index}
           rect={open.rect}
-          onIndex={(i) => setOpen((o) => (o ? { ...o, index: i } : o))}
+          onIndex={(i) => setOpen((o) => (o ? { ...o, book: books[i] ?? o.book } : o))}
           onClose={() => setOpen(null)}
         />
       ) : null}
