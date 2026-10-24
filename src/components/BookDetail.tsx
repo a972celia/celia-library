@@ -6,15 +6,16 @@ import { COVER_W, faceFont } from "./bookFaces";
 export type SpineRect = { left: number; top: number; width: number; height: number };
 
 type Props = {
+  book: Book;
   books: Book[];
-  index: number;
   rect: SpineRect;
   onIndex: (i: number) => void;
   onClose: () => void;
 };
 
-export function BookDetail({ books, index, rect, onIndex, onClose }: Props) {
-  const book = books[index]!;
+export function BookDetail({ book, books, rect, onIndex, onClose }: Props) {
+  // the shelf may re-filter while this is open, so resolve the index lazily
+  const index = books.findIndex((b) => b.id === book.id);
   const [out, setOut] = useState(false);
   const [vp, setVp] = useState({ w: 1280, h: 800 });
 
@@ -32,8 +33,8 @@ export function BookDetail({ books, index, rect, onIndex, onClose }: Props) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") retract();
-      if (e.key === "ArrowLeft") onIndex((index - 1 + books.length) % books.length);
-      if (e.key === "ArrowRight") onIndex((index + 1) % books.length);
+      if (e.key === "ArrowLeft" && index >= 0) onIndex((index - 1 + books.length) % books.length);
+      if (e.key === "ArrowRight" && index >= 0) onIndex((index + 1) % books.length);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -138,14 +139,14 @@ export function BookDetail({ books, index, rect, onIndex, onClose }: Props) {
         <div className="mt-8 flex flex-wrap gap-3">
           <button
             type="button"
-            onClick={() => onIndex((index - 1 + books.length) % books.length)}
+            onClick={() => index >= 0 && onIndex((index - 1 + books.length) % books.length)}
             className="rounded-full border border-border px-4 py-2 font-mono text-[11px] uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary"
           >
             Previous
           </button>
           <button
             type="button"
-            onClick={() => onIndex((index + 1) % books.length)}
+            onClick={() => index >= 0 && onIndex((index + 1) % books.length)}
             className="rounded-full border border-border px-4 py-2 font-mono text-[11px] uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary"
           >
             Next
