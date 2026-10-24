@@ -1,8 +1,140 @@
-// Generated from goodreads_library_export.csv — the to-read shelf.
+// Generated from goodreads_library_export-2.csv — the to-read shelf.
 
 import type { Book } from "./books";
 
 export const toRead: Book[] = [
+  {
+    "id": "gr-4406",
+    "genres": [
+      "Fiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/isbn/9780142000656-L.jpg",
+    "blurb": "East of Eden by John Steinbeck.",
+    "binding": "hardcover",
+    "finish": "cloth",
+    "spine": "#a4a9a1",
+    "ink": "#241f19",
+    "face": "serif",
+    "caps": false,
+    "width": 36,
+    "height": 247,
+    "lean": 0.0,
+    "depth": 1.3,
+    "wear": 0.23,
+    "goodreadsId": "4406",
+    "title": "East of Eden",
+    "author": "John Steinbeck",
+    "year": 1952,
+    "publisher": "Penguin Books",
+    "rating": 0.0,
+    "finished": "Want to read"
+  },
+  {
+    "id": "gr-157993",
+    "genres": [
+      "Fantasy",
+      "Fiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/isbn/9780152023980-L.jpg",
+    "blurb": "The Little Prince by Antoine de Saint-Exupéry.",
+    "binding": "mass",
+    "finish": "gloss",
+    "spine": "#eacb97",
+    "ink": "#241f19",
+    "face": "serif",
+    "caps": true,
+    "width": 16,
+    "height": 202,
+    "lean": -2.0,
+    "depth": -1.6,
+    "wear": 0.27,
+    "goodreadsId": "157993",
+    "title": "The Little Prince",
+    "author": "Antoine de Saint-Exupéry",
+    "year": 1943,
+    "publisher": "Harcourt, Inc.",
+    "rating": 0.0,
+    "finished": "Want to read"
+  },
+  {
+    "id": "gr-228110489",
+    "genres": [
+      "Fiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/isbn/9780802165176-L.jpg",
+    "blurb": "Heart the Lover by Lily King.",
+    "binding": "mass",
+    "finish": "matte",
+    "spine": "#f78223",
+    "ink": "#241f19",
+    "face": "mono",
+    "caps": true,
+    "width": 16,
+    "height": 196,
+    "lean": -2.0,
+    "depth": -7.0,
+    "wear": 0.3,
+    "goodreadsId": "228110489",
+    "title": "Heart the Lover",
+    "author": "Lily King",
+    "year": 2025,
+    "publisher": "Grove Press",
+    "rating": 0.0,
+    "finished": "Want to read"
+  },
+  {
+    "id": "gr-231127044",
+    "genres": [
+      "Mystery & Thriller",
+      "Fiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/id/15149022-L.jpg",
+    "blurb": "Mad Mabel by Sally Hepworth.",
+    "binding": "paperback",
+    "finish": "gloss",
+    "spine": "#96c5b4",
+    "ink": "#241f19",
+    "face": "sans",
+    "caps": true,
+    "width": 18,
+    "height": 217,
+    "lean": -4.7,
+    "depth": -0.1,
+    "wear": 0.33,
+    "goodreadsId": "231127044",
+    "title": "Mad Mabel",
+    "author": "Sally Hepworth",
+    "year": 2025,
+    "publisher": "St. Martin's Press",
+    "rating": 0.0,
+    "finished": "Want to read"
+  },
+  {
+    "id": "gr-41880609",
+    "genres": [
+      "Fiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/isbn/9780525562023-L.jpg",
+    "blurb": "On Earth We're Briefly Gorgeous by Ocean Vuong.",
+    "binding": "mass",
+    "finish": "gloss",
+    "spine": "#50514a",
+    "ink": "#faf7f0",
+    "face": "serif",
+    "caps": false,
+    "width": 16,
+    "height": 200,
+    "lean": -2.2,
+    "depth": -6.9,
+    "wear": 0.07,
+    "goodreadsId": "41880609",
+    "title": "On Earth We're Briefly Gorgeous",
+    "author": "Ocean Vuong",
+    "year": 2019,
+    "publisher": "Penguin Press",
+    "rating": 0.0,
+    "finished": "Want to read"
+  },
   {
     "id": "tr-circe-24",
     "title": "Circe",
@@ -28,7 +160,8 @@ export const toRead: Book[] = [
     "height": 215,
     "lean": -4.9,
     "depth": 1.5,
-    "wear": 0.34
+    "wear": 0.34,
+    "goodreadsId": "35959740"
   },
   {
     "id": "tr-the-seven-husbands-of-evelyn-h-62",
@@ -55,7 +188,8 @@ export const toRead: Book[] = [
     "height": 215,
     "lean": -1.5,
     "depth": -2.3,
-    "wear": 0.17
+    "wear": 0.17,
+    "goodreadsId": "32620332"
   },
   {
     "id": "tr-empire-of-ai-dreams-and-nightm-43",
@@ -81,7 +215,8 @@ export const toRead: Book[] = [
     "lean": -3.2,
     "depth": 4.7,
     "wear": 0.12,
-    "band": "#e86027"
+    "band": "#e86027",
+    "goodreadsId": "222725518"
   },
   {
     "id": "tr-bad-company-private-equity-and-35",
@@ -107,7 +242,8 @@ export const toRead: Book[] = [
     "height": 229,
     "lean": -1.8,
     "depth": 3.4,
-    "wear": 0.17
+    "wear": 0.17,
+    "goodreadsId": "218671853"
   },
   {
     "id": "tr-yesteryear-53",
@@ -134,7 +270,8 @@ export const toRead: Book[] = [
     "height": 217,
     "lean": -3.0,
     "depth": 5.8,
-    "wear": 0.26
+    "wear": 0.26,
+    "goodreadsId": "238226942"
   },
   {
     "id": "tr-how-to-win-friends-influence-p-7",
@@ -160,7 +297,8 @@ export const toRead: Book[] = [
     "height": 226,
     "lean": -0.4,
     "depth": -6.6,
-    "wear": 0.28
+    "wear": 0.28,
+    "goodreadsId": "4865"
   },
   {
     "id": "tr-personality-isn-t-permanent-br-38",
@@ -186,7 +324,8 @@ export const toRead: Book[] = [
     "height": 216,
     "lean": -3.1,
     "depth": 3.3,
-    "wear": 0.31
+    "wear": 0.31,
+    "goodreadsId": "44279312"
   },
   {
     "id": "tr-attention-factory-the-story-of-6",
@@ -212,7 +351,8 @@ export const toRead: Book[] = [
     "height": 230,
     "lean": 0.0,
     "depth": -3.5,
-    "wear": 0.35
+    "wear": 0.35,
+    "goodreadsId": "55666294"
   },
   {
     "id": "tr-the-optimist-sam-altman-openai-3",
@@ -238,7 +378,8 @@ export const toRead: Book[] = [
     "height": 225,
     "lean": -3.9,
     "depth": -3.5,
-    "wear": 0.35
+    "wear": 0.35,
+    "goodreadsId": "223400731"
   },
   {
     "id": "tr-the-thinking-machine-jensen-hu-60",
@@ -264,7 +405,8 @@ export const toRead: Book[] = [
     "height": 218,
     "lean": -1.2,
     "depth": -0.2,
-    "wear": 0.23
+    "wear": 0.23,
+    "goodreadsId": "211399783"
   },
   {
     "id": "tr-breakneck-china-s-quest-to-eng-3",
@@ -290,7 +432,8 @@ export const toRead: Book[] = [
     "height": 224,
     "lean": -2.3,
     "depth": 6.2,
-    "wear": 0.3
+    "wear": 0.3,
+    "goodreadsId": "223736214"
   },
   {
     "id": "tr-essentialism-the-disciplined-p-90",
@@ -316,7 +459,8 @@ export const toRead: Book[] = [
     "height": 217,
     "lean": -3.0,
     "depth": 1.6,
-    "wear": 0.17
+    "wear": 0.17,
+    "goodreadsId": "18077875"
   },
   {
     "id": "tr-battle-hymn-of-the-tiger-mothe-46",
@@ -342,7 +486,8 @@ export const toRead: Book[] = [
     "height": 204,
     "lean": -1.5,
     "depth": -3.5,
-    "wear": 0.2
+    "wear": 0.2,
+    "goodreadsId": "9160695"
   },
   {
     "id": "tr-running-on-empty-overcome-your-0",
@@ -368,7 +513,8 @@ export const toRead: Book[] = [
     "lean": -3.2,
     "depth": 0.2,
     "wear": 0.15,
-    "band": "#ef1d22"
+    "band": "#ef1d22",
+    "goodreadsId": "15812553"
   },
   {
     "id": "tr-the-course-of-love-16",
@@ -395,7 +541,8 @@ export const toRead: Book[] = [
     "height": 200,
     "lean": -1.3,
     "depth": -5.7,
-    "wear": 0.1
+    "wear": 0.1,
+    "goodreadsId": "27845690"
   },
   {
     "id": "tr-cues-master-the-secret-languag-69",
@@ -421,7 +568,8 @@ export const toRead: Book[] = [
     "height": 217,
     "lean": -3.0,
     "depth": 6.1,
-    "wear": 0.02
+    "wear": 0.02,
+    "goodreadsId": "58065810"
   },
   {
     "id": "tr-polysecure-attachment-trauma-a-92",
@@ -447,7 +595,8 @@ export const toRead: Book[] = [
     "height": 224,
     "lean": -4.0,
     "depth": -0.3,
-    "wear": 0.16
+    "wear": 0.16,
+    "goodreadsId": "52569124"
   },
   {
     "id": "tr-emotional-blackmail-when-the-p-93",
@@ -473,7 +622,8 @@ export const toRead: Book[] = [
     "height": 218,
     "lean": -1.2,
     "depth": 0.7,
-    "wear": 0.14
+    "wear": 0.14,
+    "goodreadsId": "534092"
   },
   {
     "id": "tr-master-your-success-timeless-p-64",
@@ -499,7 +649,8 @@ export const toRead: Book[] = [
     "lean": -0.6,
     "depth": -4.1,
     "wear": 0.26,
-    "band": "#ffac62"
+    "band": "#ffac62",
+    "goodreadsId": "53948768"
   },
   {
     "id": "tr-poverty-by-america-79",
@@ -525,7 +676,8 @@ export const toRead: Book[] = [
     "height": 221,
     "lean": -2.6,
     "depth": -2.2,
-    "wear": 0.24
+    "wear": 0.24,
+    "goodreadsId": "61358638"
   },
   {
     "id": "tr-never-split-the-difference-neg-73",
@@ -551,7 +703,8 @@ export const toRead: Book[] = [
     "height": 226,
     "lean": -0.4,
     "depth": 1.2,
-    "wear": 0.16
+    "wear": 0.16,
+    "goodreadsId": "123857637"
   },
   {
     "id": "tr-the-power-law-venture-capital-86",
@@ -577,7 +730,8 @@ export const toRead: Book[] = [
     "height": 254,
     "lean": -4.4,
     "depth": 2.3,
-    "wear": 0.03
+    "wear": 0.03,
+    "goodreadsId": "60212890"
   },
   {
     "id": "tr-pride-and-prejudice-39",
@@ -603,7 +757,8 @@ export const toRead: Book[] = [
     "height": 217,
     "lean": -4.7,
     "depth": -5.5,
-    "wear": 0.09
+    "wear": 0.09,
+    "goodreadsId": "1885"
   },
   {
     "id": "tr-digital-gold-bitcoin-and-the-i-92",
@@ -629,7 +784,8 @@ export const toRead: Book[] = [
     "height": 224,
     "lean": -4.0,
     "depth": -4.2,
-    "wear": 0.16
+    "wear": 0.16,
+    "goodreadsId": "23546676"
   },
   {
     "id": "tr-the-pragmatic-programmer-from-88",
@@ -655,7 +811,8 @@ export const toRead: Book[] = [
     "height": 229,
     "lean": -0.1,
     "depth": 1.5,
-    "wear": 0.07
+    "wear": 0.07,
+    "goodreadsId": "4099"
   },
   {
     "id": "tr-crying-in-h-mart-32",
@@ -681,7 +838,8 @@ export const toRead: Book[] = [
     "height": 204,
     "lean": -2.7,
     "depth": -1.1,
-    "wear": 0.05
+    "wear": 0.05,
+    "goodreadsId": "54814676"
   },
   {
     "id": "tr-the-stranger-in-the-lifeboat-94",
@@ -707,7 +865,8 @@ export const toRead: Book[] = [
     "height": 226,
     "lean": -3.8,
     "depth": 2.9,
-    "wear": 0.06
+    "wear": 0.06,
+    "goodreadsId": "56922594"
   },
   {
     "id": "tr-emotional-intelligence-why-it-65",
@@ -733,7 +892,8 @@ export const toRead: Book[] = [
     "height": 224,
     "lean": -0.6,
     "depth": 6.4,
-    "wear": 0.11
+    "wear": 0.11,
+    "goodreadsId": "26329"
   },
   {
     "id": "tr-irrational-exuberance-44",
@@ -759,7 +919,8 @@ export const toRead: Book[] = [
     "height": 221,
     "lean": -0.9,
     "depth": -2.0,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "100132"
   },
   {
     "id": "tr-talking-to-my-daughter-about-t-48",
@@ -785,7 +946,8 @@ export const toRead: Book[] = [
     "height": 207,
     "lean": -2.4,
     "depth": -3.5,
-    "wear": 0.08
+    "wear": 0.08,
+    "goodreadsId": "36490332"
   },
   {
     "id": "tr-built-to-last-successful-habit-17",
@@ -811,7 +973,8 @@ export const toRead: Book[] = [
     "height": 217,
     "lean": -3.0,
     "depth": -5.6,
-    "wear": 0.02
+    "wear": 0.02,
+    "goodreadsId": "4122"
   },
   {
     "id": "tr-peak-secrets-from-the-new-scie-64",
@@ -837,7 +1000,8 @@ export const toRead: Book[] = [
     "height": 217,
     "lean": -3.0,
     "depth": -1.7,
-    "wear": 0.23
+    "wear": 0.23,
+    "goodreadsId": "26312997"
   },
   {
     "id": "tr-start-with-why-how-great-leade-90",
@@ -863,6 +1027,7 @@ export const toRead: Book[] = [
     "height": 209,
     "lean": -2.2,
     "depth": 0.3,
-    "wear": 0.31
+    "wear": 0.31,
+    "goodreadsId": "7108725"
   }
 ];

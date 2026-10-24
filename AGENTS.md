@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+## Goodreads data
+- Keep imported shelves in the existing typed data arrays, retaining Goodreads book IDs for future reconciliation; preserve enriched covers and display properties when updating matching books so import refreshes do not undo reviewed corrections.

@@ -1,7 +1,8 @@
-// Generated from goodreads_library_export.csv — real library data.
+// Generated from goodreads_library_export-2.csv — real library data.
 
 export type Book = {
   id: string;
+  goodreadsId?: string;
   title: string;
   author: string;
   genres?: string[];
@@ -29,9 +30,63 @@ export type Book = {
 
 export const books: Book[] = [
   {
+    "id": "gr-45152372",
+    "genres": [
+      "Fantasy",
+      "Fiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/isbn/9780525522898-L.jpg",
+    "blurb": "How to Stop Time by Matt Haig.",
+    "binding": "paperback",
+    "finish": "matte",
+    "spine": "#0a9ad4",
+    "ink": "#faf7f0",
+    "face": "mono",
+    "caps": false,
+    "width": 18,
+    "height": 218,
+    "lean": -4.6,
+    "depth": -6.0,
+    "wear": 0.22,
+    "goodreadsId": "45152372",
+    "title": "How to Stop Time",
+    "author": "Matt Haig",
+    "year": 2018,
+    "publisher": "Penguin Books",
+    "rating": 3.75,
+    "finished": "Oct 2026"
+  },
+  {
+    "id": "the-code-silicon-valley-and-th-24",
+    "title": "The Code: Silicon Valley and the Remaking of America",
+    "author": "Margaret O'Mara",
+    "genres": [
+      "Nonfiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/id/9401824-L.jpg",
+    "year": 2019,
+    "blurb": "The Code: Silicon Valley and the Remaking of America by Margaret O'Mara.",
+    "rating": 4.0,
+    "finished": "Oct 2026",
+    "publisher": "Penguin Books",
+    "binding": "hardcover",
+    "finish": "cloth",
+    "spine": "#2a5d98",
+    "ink": "#faf7f0",
+    "face": "sans",
+    "caps": false,
+    "width": 27,
+    "height": 251,
+    "lean": -1.8,
+    "depth": -1.1,
+    "wear": 0.17,
+    "band": "#093c78",
+    "goodreadsId": "42403122"
+  },
+  {
     "id": "think-again-the-power-of-knowi-74",
     "title": "Think Again: The Power of Knowing What You Don't Know",
-    "author": "Adam M. Grant",
+    "author": "Adam  Grant",
     "genres": [
       "Nonfiction"
     ],
@@ -52,7 +107,8 @@ export const books: Book[] = [
     "height": 214,
     "lean": -5.0,
     "depth": -0.1,
-    "wear": 0.06
+    "wear": 0.06,
+    "goodreadsId": "55539565"
   },
   {
     "id": "the-wedding-people-60",
@@ -64,7 +120,7 @@ export const books: Book[] = [
     "cover": "https://covers.openlibrary.org/b/id/15127690-L.jpg",
     "year": 2024,
     "blurb": "It’s a beautiful day in Newport, Rhode Island, when Phoebe Stone arrives at the grand Cornwall Inn wearing a green dress and gold heels, not a bag in sight, alone. She’s immediately mistaken by everyone in the lobby for one of the wedding people, but she’s actually the only guest at the Cornwall who isn’t here for the big event. Phoebe is here because she’s dreamed of coming for years—she hoped to shuck oysters and take sunset sails with her husband, only now she’s here without him, at rock bottom, and determined t",
-    "rating": 4.0,
+    "rating": 5.0,
     "finished": "Sep 2026",
     "publisher": "Henry Holt and Company",
     "binding": "paperback",
@@ -78,7 +134,8 @@ export const books: Book[] = [
     "height": 218,
     "lean": -2.9,
     "depth": 5.3,
-    "wear": 0.27
+    "wear": 0.27,
+    "goodreadsId": "198902277"
   },
   {
     "id": "the-secret-lives-of-introverts-37",
@@ -104,33 +161,8 @@ export const books: Book[] = [
     "lean": -1.9,
     "depth": 4.5,
     "wear": 0.04,
-    "band": "#edad60"
-  },
-  {
-    "id": "strangers-a-memoir-of-marriage-3",
-    "title": "Strangers: A Memoir of Marriage",
-    "author": "Belle Burden",
-    "genres": [
-      "Nonfiction"
-    ],
-    "cover": "https://covers.openlibrary.org/b/id/15165045-L.jpg",
-    "year": 2026,
-    "blurb": "A memoir about the sudden, unexplained end of a twenty-year marriage. In early 2020, Belle Burden's husband abruptly announced he was leaving, with no prior warning or discussion. Burden revisits their life together searching for clues she may have missed, while reckoning with her own family history and societal expectations of how women should respond to betrayal. The book traces her transformation from a quiet, compliant woman into someone determined to reclaim her voice and rebuild her life.",
-    "rating": 5.0,
-    "finished": "Aug 2026",
-    "publisher": "The Dial Press",
-    "binding": "mass",
-    "finish": "matte",
-    "spine": "#fbf0dd",
-    "band": "#214bb4",
-    "ink": "#241f19",
-    "face": "mono",
-    "caps": false,
-    "width": 16,
-    "height": 197,
-    "lean": -0.7,
-    "depth": -5.1,
-    "wear": 0.1
+    "band": "#edad60",
+    "goodreadsId": "35415920"
   },
   {
     "id": "the-stranger-70",
@@ -156,7 +188,35 @@ export const books: Book[] = [
     "lean": -1.9,
     "depth": -0.3,
     "wear": 0.28,
-    "band": "#dcaf00"
+    "band": "#dcaf00",
+    "goodreadsId": "49552"
+  },
+  {
+    "id": "strangers-a-memoir-of-marriage-3",
+    "title": "Strangers: A Memoir of Marriage",
+    "author": "Belle Burden",
+    "genres": [
+      "Nonfiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/id/15165045-L.jpg",
+    "year": 2026,
+    "blurb": "A memoir about the sudden, unexplained end of a twenty-year marriage. In early 2020, Belle Burden's husband abruptly announced he was leaving, with no prior warning or discussion. Burden revisits their life together searching for clues she may have missed, while reckoning with her own family history and societal expectations of how women should respond to betrayal. The book traces her transformation from a quiet, compliant woman into someone determined to reclaim her voice and rebuild her life.",
+    "rating": 5.0,
+    "finished": "Aug 2026",
+    "publisher": "The Dial Press",
+    "binding": "mass",
+    "finish": "matte",
+    "spine": "#fbf0dd",
+    "band": "#214bb4",
+    "ink": "#241f19",
+    "face": "mono",
+    "caps": false,
+    "width": 16,
+    "height": 197,
+    "lean": -0.7,
+    "depth": -5.1,
+    "wear": 0.1,
+    "goodreadsId": "231108670"
   },
   {
     "id": "remarkably-bright-creatures-71",
@@ -182,7 +242,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -2.4,
     "depth": -6.2,
-    "wear": 0.17
+    "wear": 0.17,
+    "goodreadsId": "58733693"
   },
   {
     "id": "the-correspondent-81",
@@ -208,7 +269,8 @@ export const books: Book[] = [
     "height": 219,
     "lean": -1.1,
     "depth": -0.1,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "223001257"
   },
   {
     "id": "the-midnight-train-the-midnigh-26",
@@ -233,7 +295,8 @@ export const books: Book[] = [
     "height": 224,
     "lean": -0.6,
     "depth": 0.1,
-    "wear": 0.26
+    "wear": 0.26,
+    "goodreadsId": "242380266"
   },
   {
     "id": "streetwise-getting-to-and-thro-12",
@@ -258,7 +321,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -2.4,
     "depth": 1.6,
-    "wear": 0.14
+    "wear": 0.14,
+    "goodreadsId": "235699101"
   },
   {
     "id": "yellowface-54",
@@ -284,7 +348,8 @@ export const books: Book[] = [
     "height": 226,
     "lean": -0.4,
     "depth": -2.4,
-    "wear": 0.16
+    "wear": 0.16,
+    "goodreadsId": "62047984"
   },
   {
     "id": "the-opposite-of-settling-how-t-23",
@@ -310,7 +375,8 @@ export const books: Book[] = [
     "lean": -2.3,
     "depth": 2.3,
     "wear": 0.3,
-    "band": "#068c27"
+    "band": "#068c27",
+    "goodreadsId": "221739800"
   },
   {
     "id": "careless-people-a-cautionary-t-95",
@@ -336,7 +402,8 @@ export const books: Book[] = [
     "height": 222,
     "lean": -2.5,
     "depth": -2.1,
-    "wear": 0.19
+    "wear": 0.19,
+    "goodreadsId": "223436601"
   },
   {
     "id": "how-to-love-better-the-path-to-55",
@@ -362,7 +429,8 @@ export const books: Book[] = [
     "height": 220,
     "lean": -4.4,
     "depth": -0.1,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "215100951"
   },
   {
     "id": "the-let-them-theory-34",
@@ -388,7 +456,8 @@ export const books: Book[] = [
     "height": 218,
     "lean": -1.2,
     "depth": 3.4,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "216351768"
   },
   {
     "id": "supremacy-ai-chatgpt-and-the-r-57",
@@ -414,7 +483,8 @@ export const books: Book[] = [
     "height": 217,
     "lean": -4.7,
     "depth": -1.6,
-    "wear": 0.24
+    "wear": 0.24,
+    "goodreadsId": "199809440"
   },
   {
     "id": "it-begins-with-you-the-9-hard-85",
@@ -439,7 +509,8 @@ export const books: Book[] = [
     "height": 210,
     "lean": -1.8,
     "depth": -2.3,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "211880154"
   },
   {
     "id": "the-cult-of-we-wework-adam-neu-25",
@@ -465,7 +536,8 @@ export const books: Book[] = [
     "height": 248,
     "lean": -0.5,
     "depth": -2.2,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "54998264"
   },
   {
     "id": "the-anxious-generation-how-the-70",
@@ -491,7 +563,8 @@ export const books: Book[] = [
     "height": 214,
     "lean": -1.6,
     "depth": -3.6,
-    "wear": 0.1
+    "wear": 0.1,
+    "goodreadsId": "171681821"
   },
   {
     "id": "good-work-reclaiming-your-inne-0",
@@ -517,7 +590,8 @@ export const books: Book[] = [
     "lean": -4.8,
     "depth": -0.2,
     "wear": 0.11,
-    "band": "#1a4b66"
+    "band": "#1a4b66",
+    "goodreadsId": "213618261"
   },
   {
     "id": "supercommunicators-how-to-unlo-37",
@@ -543,7 +617,8 @@ export const books: Book[] = [
     "lean": -0.9,
     "depth": 2.8,
     "wear": 0.35,
-    "band": "#fae931"
+    "band": "#fae931",
+    "goodreadsId": "157981748"
   },
   {
     "id": "everything-is-fucked-ein-buch-82",
@@ -568,7 +643,8 @@ export const books: Book[] = [
     "height": 221,
     "lean": -4.3,
     "depth": -4.2,
-    "wear": 0.13
+    "wear": 0.13,
+    "goodreadsId": "45443399"
   },
   {
     "id": "the-almanack-of-naval-ravikant-51",
@@ -593,7 +669,8 @@ export const books: Book[] = [
     "height": 209,
     "lean": -1.6,
     "depth": -0.3,
-    "wear": 0.31
+    "wear": 0.31,
+    "goodreadsId": "54898389"
   },
   {
     "id": "the-one-thing-the-surprisingly-5",
@@ -619,7 +696,8 @@ export const books: Book[] = [
     "height": 206,
     "lean": -0.1,
     "depth": 5.4,
-    "wear": 0.22
+    "wear": 0.22,
+    "goodreadsId": "16256798"
   },
   {
     "id": "don-t-sweat-the-small-stuff-an-5",
@@ -645,7 +723,8 @@ export const books: Book[] = [
     "lean": -1.5,
     "depth": -1.4,
     "wear": 0.17,
-    "band": "#e7d093"
+    "band": "#e7d093",
+    "goodreadsId": "170548"
   },
   {
     "id": "good-vibes-good-life-how-self-31",
@@ -671,7 +750,8 @@ export const books: Book[] = [
     "lean": -1.9,
     "depth": 1.2,
     "wear": 0.04,
-    "band": "#b7a40d"
+    "band": "#b7a40d",
+    "goodreadsId": "42186465"
   },
   {
     "id": "the-pathless-path-imagining-a-71",
@@ -697,7 +777,8 @@ export const books: Book[] = [
     "height": 202,
     "lean": -2.0,
     "depth": -6.1,
-    "wear": 0.24
+    "wear": 0.24,
+    "goodreadsId": "60151185"
   },
   {
     "id": "the-tipping-point-how-little-t-41",
@@ -723,7 +804,8 @@ export const books: Book[] = [
     "lean": -1.3,
     "depth": -1.8,
     "wear": 0.01,
-    "band": "#e3e597"
+    "band": "#e3e597",
+    "goodreadsId": "2612"
   },
   {
     "id": "elon-musk-64",
@@ -749,33 +831,8 @@ export const books: Book[] = [
     "height": 238,
     "lean": -2.4,
     "depth": 1.3,
-    "wear": 0.2
-  },
-  {
-    "id": "the-power-of-habit-why-we-do-w-77",
-    "title": "The Power of Habit: Why We Do What We Do in Life and Business",
-    "author": "Charles Duhigg",
-    "genres": [
-      "Nonfiction"
-    ],
-    "cover": "https://covers.openlibrary.org/b/id/9078085-L.jpg",
-    "year": 2012,
-    "blurb": "A young woman walks into a laboratory. Over the past two years, she has transformed almost every aspect of her life. She has quit smoking, run a marathon, and been promoted at work. The patterns inside her brain, neurologists discover, have fundamentally changed. Marketers at Procter & Gamble study videos of people making their beds. They are desperately trying to figure out how to sell a new product called Febreze, on track to be one of the biggest flops in company history. Suddenly, one of them detects a nearly i",
-    "rating": 3.0,
-    "finished": "Nov 2023",
-    "publisher": "Random House",
-    "binding": "paperback",
-    "finish": "matte",
-    "spine": "#ffe814",
-    "band": "#ffe814",
-    "ink": "#241f19",
-    "face": "serif",
-    "caps": false,
-    "width": 23,
-    "height": 224,
-    "lean": -4.0,
-    "depth": 6.3,
-    "wear": 0.16
+    "wear": 0.2,
+    "goodreadsId": "122765395"
   },
   {
     "id": "irresistible-the-rise-of-addic-63",
@@ -801,7 +858,35 @@ export const books: Book[] = [
     "height": 217,
     "lean": -1.3,
     "depth": 5.4,
-    "wear": 0.22
+    "wear": 0.22,
+    "goodreadsId": "30962055"
+  },
+  {
+    "id": "the-power-of-habit-why-we-do-w-77",
+    "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+    "author": "Charles Duhigg",
+    "genres": [
+      "Nonfiction"
+    ],
+    "cover": "https://covers.openlibrary.org/b/id/9078085-L.jpg",
+    "year": 2012,
+    "blurb": "A young woman walks into a laboratory. Over the past two years, she has transformed almost every aspect of her life. She has quit smoking, run a marathon, and been promoted at work. The patterns inside her brain, neurologists discover, have fundamentally changed. Marketers at Procter & Gamble study videos of people making their beds. They are desperately trying to figure out how to sell a new product called Febreze, on track to be one of the biggest flops in company history. Suddenly, one of them detects a nearly i",
+    "rating": 3.0,
+    "finished": "Nov 2023",
+    "publisher": "Random House",
+    "binding": "paperback",
+    "finish": "matte",
+    "spine": "#ffe814",
+    "band": "#ffe814",
+    "ink": "#241f19",
+    "face": "serif",
+    "caps": false,
+    "width": 23,
+    "height": 224,
+    "lean": -4.0,
+    "depth": 6.3,
+    "wear": 0.16,
+    "goodreadsId": "12609433"
   },
   {
     "id": "from-strength-to-strength-find-37",
@@ -827,7 +912,8 @@ export const books: Book[] = [
     "height": 224,
     "lean": -0.6,
     "depth": -4.1,
-    "wear": 0.35
+    "wear": 0.35,
+    "goodreadsId": "58100575"
   },
   {
     "id": "the-gap-and-the-gain-the-high-78",
@@ -853,7 +939,8 @@ export const books: Book[] = [
     "lean": -4.3,
     "depth": -4.2,
     "wear": 0.1,
-    "band": "#ffbf0c"
+    "band": "#ffbf0c",
+    "goodreadsId": "58563697"
   },
   {
     "id": "billion-dollar-loser-the-epic-66",
@@ -879,7 +966,8 @@ export const books: Book[] = [
     "height": 219,
     "lean": -4.5,
     "depth": -5.0,
-    "wear": 0.17
+    "wear": 0.17,
+    "goodreadsId": "54502643"
   },
   {
     "id": "counselling-for-toads-60",
@@ -905,7 +993,8 @@ export const books: Book[] = [
     "height": 201,
     "lean": -4.2,
     "depth": 4.9,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "548887"
   },
   {
     "id": "city-of-girls-6",
@@ -932,7 +1021,8 @@ export const books: Book[] = [
     "height": 246,
     "lean": -2.6,
     "depth": 4.7,
-    "wear": 0.3
+    "wear": 0.3,
+    "goodreadsId": "51918871"
   },
   {
     "id": "get-the-guy-learn-secrets-of-t-48",
@@ -957,7 +1047,8 @@ export const books: Book[] = [
     "height": 205,
     "lean": -4.7,
     "depth": 6.2,
-    "wear": 0.24
+    "wear": 0.24,
+    "goodreadsId": "16032581"
   },
   {
     "id": "the-power-of-now-a-guide-to-sp-33",
@@ -967,7 +1058,7 @@ export const books: Book[] = [
       "Nonfiction"
     ],
     "cover": "https://covers.openlibrary.org/b/id/551262-L.jpg",
-    "year": 1997,
+    "year": 2004,
     "blurb": "The Power of Now: A Guide to Spiritual Enlightenment by Eckhart Tolle.",
     "rating": 4.0,
     "finished": "May 2023",
@@ -983,7 +1074,8 @@ export const books: Book[] = [
     "lean": -4.7,
     "depth": -3.1,
     "wear": 0.18,
-    "band": "#009b79"
+    "band": "#009b79",
+    "goodreadsId": "6708"
   },
   {
     "id": "8-rules-of-love-how-to-find-it-66",
@@ -1009,7 +1101,8 @@ export const books: Book[] = [
     "height": 230,
     "lean": 0.0,
     "depth": 3.4,
-    "wear": 0.08
+    "wear": 0.08,
+    "goodreadsId": "62634115"
   },
   {
     "id": "chip-war-the-fight-for-the-wor-7",
@@ -1035,7 +1128,8 @@ export const books: Book[] = [
     "height": 246,
     "lean": -1.1,
     "depth": 4.4,
-    "wear": 0.12
+    "wear": 0.12,
+    "goodreadsId": "60321447"
   },
   {
     "id": "project-hail-mary-31",
@@ -1062,7 +1156,8 @@ export const books: Book[] = [
     "height": 252,
     "lean": -0.7,
     "depth": -1.8,
-    "wear": 0.16
+    "wear": 0.16,
+    "goodreadsId": "54493401"
   },
   {
     "id": "way-of-the-peaceful-warrior-5",
@@ -1088,7 +1183,8 @@ export const books: Book[] = [
     "height": 197,
     "lean": -4.6,
     "depth": -2.4,
-    "wear": 0.16
+    "wear": 0.16,
+    "goodreadsId": "2255"
   },
   {
     "id": "grit-the-power-of-passion-and-26",
@@ -1114,7 +1210,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -0.7,
     "depth": -2.7,
-    "wear": 0.04
+    "wear": 0.04,
+    "goodreadsId": "27213329"
   },
   {
     "id": "conversations-with-friends-18",
@@ -1140,7 +1237,8 @@ export const books: Book[] = [
     "height": 222,
     "lean": -2.5,
     "depth": -3.0,
-    "wear": 0.25
+    "wear": 0.25,
+    "goodreadsId": "32187419"
   },
   {
     "id": "the-mountain-is-you-transformi-33",
@@ -1166,7 +1264,8 @@ export const books: Book[] = [
     "lean": -1.7,
     "depth": 3.5,
     "wear": 0.06,
-    "band": "#e4cb6f"
+    "band": "#e4cb6f",
+    "goodreadsId": "53642699"
   },
   {
     "id": "greenlights-85",
@@ -1192,7 +1291,8 @@ export const books: Book[] = [
     "height": 214,
     "lean": -5.0,
     "depth": 1.1,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "52838315"
   },
   {
     "id": "shoe-dog-a-memoir-by-the-creat-13",
@@ -1218,7 +1318,8 @@ export const books: Book[] = [
     "height": 227,
     "lean": -3.7,
     "depth": -2.1,
-    "wear": 0.13
+    "wear": 0.13,
+    "goodreadsId": "27220736"
   },
   {
     "id": "the-everything-store-jeff-bezo-56",
@@ -1244,7 +1345,8 @@ export const books: Book[] = [
     "height": 215,
     "lean": -4.9,
     "depth": 3.0,
-    "wear": 0.13
+    "wear": 0.13,
+    "goodreadsId": "17660462"
   },
   {
     "id": "book-lovers-32",
@@ -1271,7 +1373,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -4.1,
     "depth": -6.7,
-    "wear": 0.09
+    "wear": 0.09,
+    "goodreadsId": "58690308"
   },
   {
     "id": "good-to-great-why-some-compani-87",
@@ -1297,7 +1400,8 @@ export const books: Book[] = [
     "height": 224,
     "lean": -0.6,
     "depth": 3.1,
-    "wear": 0.02
+    "wear": 0.02,
+    "goodreadsId": "76865"
   },
   {
     "id": "the-next-person-you-meet-in-he-43",
@@ -1323,7 +1427,8 @@ export const books: Book[] = [
     "height": 199,
     "lean": -2.9,
     "depth": -1.6,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "38718233"
   },
   {
     "id": "liar-s-poker-22",
@@ -1349,7 +1454,8 @@ export const books: Book[] = [
     "height": 228,
     "lean": -0.2,
     "depth": 4.4,
-    "wear": 0.09
+    "wear": 0.09,
+    "goodreadsId": "7865083"
   },
   {
     "id": "zero-to-one-notes-on-startups-24",
@@ -1375,7 +1481,8 @@ export const books: Book[] = [
     "height": 208,
     "lean": -2.9,
     "depth": 0.2,
-    "wear": 0.18
+    "wear": 0.18,
+    "goodreadsId": "18050143"
   },
   {
     "id": "how-to-think-about-money-37",
@@ -1401,7 +1508,8 @@ export const books: Book[] = [
     "height": 198,
     "lean": -0.9,
     "depth": -0.2,
-    "wear": 0.14
+    "wear": 0.14,
+    "goodreadsId": "30367111"
   },
   {
     "id": "how-to-not-die-alone-the-surpr-93",
@@ -1427,7 +1535,8 @@ export const books: Book[] = [
     "height": 222,
     "lean": -2.5,
     "depth": 3.0,
-    "wear": 0.1
+    "wear": 0.1,
+    "goodreadsId": "54304221"
   },
   {
     "id": "the-black-swan-the-impact-of-t-37",
@@ -1441,7 +1550,7 @@ export const books: Book[] = [
     "blurb": "From the critically acclaimed author of Fooled by Randomness, a book about the impact of improbable events on every aspect of life.",
     "rating": 3.0,
     "finished": "Feb 2022",
-    "publisher": "Random House",
+    "publisher": "Random House ",
     "binding": "hardcover",
     "finish": "cloth",
     "spine": "#fefefe",
@@ -1452,7 +1561,8 @@ export const books: Book[] = [
     "height": 239,
     "lean": -5.0,
     "depth": 5.9,
-    "wear": 0.06
+    "wear": 0.06,
+    "goodreadsId": "242472"
   },
   {
     "id": "the-hard-thing-about-hard-thin-54",
@@ -1478,7 +1588,8 @@ export const books: Book[] = [
     "height": 227,
     "lean": -3.7,
     "depth": 3.0,
-    "wear": 0.01
+    "wear": 0.01,
+    "goodreadsId": "18176747"
   },
   {
     "id": "dollars-and-sense-how-we-misth-14",
@@ -1504,7 +1615,8 @@ export const books: Book[] = [
     "height": 218,
     "lean": -1.2,
     "depth": -4.7,
-    "wear": 0.29
+    "wear": 0.29,
+    "goodreadsId": "34323010"
   },
   {
     "id": "antifragile-things-that-gain-f-8",
@@ -1530,7 +1642,8 @@ export const books: Book[] = [
     "height": 240,
     "lean": -5.0,
     "depth": -5.5,
-    "wear": 0.12
+    "wear": 0.12,
+    "goodreadsId": "13530973"
   },
   {
     "id": "the-midnight-library-the-midni-74",
@@ -1557,7 +1670,8 @@ export const books: Book[] = [
     "height": 230,
     "lean": -1.7,
     "depth": -5.2,
-    "wear": 0.33
+    "wear": 0.33,
+    "goodreadsId": "52578297"
   },
   {
     "id": "steve-jobs-50",
@@ -1582,7 +1696,8 @@ export const books: Book[] = [
     "height": 250,
     "lean": -4.6,
     "depth": 6.0,
-    "wear": 0.13
+    "wear": 0.13,
+    "goodreadsId": "11084145"
   },
   {
     "id": "the-bad-beginning-a-series-of-61",
@@ -1608,7 +1723,8 @@ export const books: Book[] = [
     "height": 197,
     "lean": -4.3,
     "depth": -4.2,
-    "wear": 0.19
+    "wear": 0.19,
+    "goodreadsId": "78411"
   },
   {
     "id": "where-the-crawdads-sing-60",
@@ -1635,7 +1751,8 @@ export const books: Book[] = [
     "height": 222,
     "lean": -0.8,
     "depth": -1.9,
-    "wear": 0.3
+    "wear": 0.3,
+    "goodreadsId": "36809135"
   },
   {
     "id": "a-random-walk-down-wall-street-16",
@@ -1661,7 +1778,8 @@ export const books: Book[] = [
     "height": 247,
     "lean": -0.4,
     "depth": 3.3,
-    "wear": 0.28
+    "wear": 0.28,
+    "goodreadsId": "40242274"
   },
   {
     "id": "no-filter-the-inside-story-of-76",
@@ -1687,7 +1805,8 @@ export const books: Book[] = [
     "height": 226,
     "lean": -2.1,
     "depth": -4.4,
-    "wear": 0.23
+    "wear": 0.23,
+    "goodreadsId": "50772888"
   },
   {
     "id": "the-tyranny-of-merit-what-s-be-0",
@@ -1713,7 +1832,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -0.7,
     "depth": 4.8,
-    "wear": 0.1
+    "wear": 0.1,
+    "goodreadsId": "50364458"
   },
   {
     "id": "flash-boys-a-wall-street-revol-59",
@@ -1739,7 +1859,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -4.1,
     "depth": -4.3,
-    "wear": 0.15
+    "wear": 0.15,
+    "goodreadsId": "24724602"
   },
   {
     "id": "1984-69",
@@ -1766,7 +1887,8 @@ export const books: Book[] = [
     "height": 220,
     "lean": -2.7,
     "depth": -2.6,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "40961427"
   },
   {
     "id": "rich-habits-poor-habits-discov-46",
@@ -1792,7 +1914,8 @@ export const books: Book[] = [
     "lean": -3.6,
     "depth": -1.4,
     "wear": 0.17,
-    "band": "#9f0817"
+    "band": "#9f0817",
+    "goodreadsId": "33553825"
   },
   {
     "id": "sapiens-a-brief-history-of-hum-91",
@@ -1818,7 +1941,8 @@ export const books: Book[] = [
     "lean": -4.2,
     "depth": 0.1,
     "wear": 0.05,
-    "band": "#db2d00"
+    "band": "#db2d00",
+    "goodreadsId": "23692271"
   },
   {
     "id": "attached-the-new-science-of-ad-70",
@@ -1843,7 +1967,8 @@ export const books: Book[] = [
     "height": 221,
     "lean": -4.3,
     "depth": 2.1,
-    "wear": 0.28
+    "wear": 0.28,
+    "goodreadsId": "9547888"
   },
   {
     "id": "the-four-the-hidden-dna-of-ama-82",
@@ -1869,7 +1994,8 @@ export const books: Book[] = [
     "height": 226,
     "lean": -0.4,
     "depth": 5.1,
-    "wear": 0.31
+    "wear": 0.31,
+    "goodreadsId": "34427200"
   },
   {
     "id": "man-s-search-for-meaning-45",
@@ -1895,7 +2021,8 @@ export const books: Book[] = [
     "height": 206,
     "lean": -2.8,
     "depth": -1.2,
-    "wear": 0.34
+    "wear": 0.34,
+    "goodreadsId": "4069"
   },
   {
     "id": "the-psychology-of-money-timele-58",
@@ -1921,7 +2048,8 @@ export const books: Book[] = [
     "lean": -3.3,
     "depth": -3.5,
     "wear": 0.32,
-    "band": "#faea26"
+    "band": "#faea26",
+    "goodreadsId": "41881472"
   },
   {
     "id": "poor-charlie-s-almanack-the-wi-61",
@@ -1947,7 +2075,8 @@ export const books: Book[] = [
     "height": 240,
     "lean": -3.4,
     "depth": 0.3,
-    "wear": 0.31
+    "wear": 0.31,
+    "goodreadsId": "944652"
   },
   {
     "id": "ai-superpowers-china-silicon-v-59",
@@ -1973,7 +2102,8 @@ export const books: Book[] = [
     "height": 209,
     "lean": -4.9,
     "depth": -5.4,
-    "wear": 0.31
+    "wear": 0.31,
+    "goodreadsId": "38242135"
   },
   {
     "id": "21-lessons-for-the-21st-centur-8",
@@ -1999,7 +2129,8 @@ export const books: Book[] = [
     "height": 221,
     "lean": -2.6,
     "depth": -6.7,
-    "wear": 0.12
+    "wear": 0.12,
+    "goodreadsId": "38820046"
   },
   {
     "id": "no-rules-rules-netflix-and-the-80",
@@ -2025,7 +2156,8 @@ export const books: Book[] = [
     "height": 239,
     "lean": -1.8,
     "depth": -2.3,
-    "wear": 0.08
+    "wear": 0.08,
+    "goodreadsId": "49099937"
   },
   {
     "id": "the-ride-of-a-lifetime-lessons-9",
@@ -2051,7 +2183,8 @@ export const books: Book[] = [
     "lean": -0.8,
     "depth": -4.0,
     "wear": 0.0,
-    "band": "#f1c873"
+    "band": "#f1c873",
+    "goodreadsId": "44525305"
   },
   {
     "id": "principles-life-and-work-10",
@@ -2077,7 +2210,8 @@ export const books: Book[] = [
     "height": 209,
     "lean": -3.4,
     "depth": 2.1,
-    "wear": 0.19
+    "wear": 0.19,
+    "goodreadsId": "34536488"
   },
   {
     "id": "bad-blood-secrets-and-lies-in-93",
@@ -2102,7 +2236,8 @@ export const books: Book[] = [
     "height": 215,
     "lean": -4.9,
     "depth": -3.9,
-    "wear": 0.19
+    "wear": 0.19,
+    "goodreadsId": "37976541"
   },
   {
     "id": "creativity-inc-overcoming-the-42",
@@ -2128,7 +2263,8 @@ export const books: Book[] = [
     "height": 218,
     "lean": -4.6,
     "depth": 0.0,
-    "wear": 0.28
+    "wear": 0.28,
+    "goodreadsId": "18077903"
   },
   {
     "id": "atomic-habits-an-easy-proven-w-84",
@@ -2154,7 +2290,8 @@ export const books: Book[] = [
     "lean": -3.3,
     "depth": 6.7,
     "wear": 0.2,
-    "band": "#d08b52"
+    "band": "#d08b52",
+    "goodreadsId": "40121378"
   },
   {
     "id": "elon-musk-tesla-spacex-and-the-82",
@@ -2180,7 +2317,8 @@ export const books: Book[] = [
     "height": 225,
     "lean": -2.2,
     "depth": 5.4,
-    "wear": 0.25
+    "wear": 0.25,
+    "goodreadsId": "25541028"
   },
   {
     "id": "kane-abel-kane-abel-1-37",
@@ -2207,7 +2345,8 @@ export const books: Book[] = [
     "height": 254,
     "lean": -1.9,
     "depth": 5.1,
-    "wear": 0.13
+    "wear": 0.13,
+    "goodreadsId": "78983"
   },
   {
     "id": "an-unquiet-mind-a-memoir-of-mo-57",
@@ -2233,7 +2372,8 @@ export const books: Book[] = [
     "height": 199,
     "lean": -1.1,
     "depth": -1.3,
-    "wear": 0.06
+    "wear": 0.06,
+    "goodreadsId": "361459"
   },
   {
     "id": "the-talent-code-unlocking-the-77",
@@ -2259,7 +2399,8 @@ export const books: Book[] = [
     "height": 217,
     "lean": -3.0,
     "depth": 3.4,
-    "wear": 0.23
+    "wear": 0.23,
+    "goodreadsId": "5771014"
   },
   {
     "id": "being-mortal-medicine-and-what-75",
@@ -2285,7 +2426,8 @@ export const books: Book[] = [
     "height": 220,
     "lean": -2.7,
     "depth": -0.8,
-    "wear": 0.02
+    "wear": 0.02,
+    "goodreadsId": "20696006"
   },
   {
     "id": "deep-work-rules-for-focused-su-1",
@@ -2311,7 +2453,8 @@ export const books: Book[] = [
     "height": 227,
     "lean": -0.3,
     "depth": 4.6,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "25744928"
   },
   {
     "id": "outliers-the-story-of-success-46",
@@ -2337,7 +2480,8 @@ export const books: Book[] = [
     "height": 216,
     "lean": -1.4,
     "depth": 6.2,
-    "wear": 0.12
+    "wear": 0.12,
+    "goodreadsId": "3228917"
   },
   {
     "id": "so-good-they-can-t-ignore-you-68",
@@ -2363,7 +2507,8 @@ export const books: Book[] = [
     "height": 230,
     "lean": -1.7,
     "depth": -0.1,
-    "wear": 0.3
+    "wear": 0.3,
+    "goodreadsId": "13525945"
   },
   {
     "id": "harry-potter-and-the-deathly-h-2",
@@ -2389,7 +2534,8 @@ export const books: Book[] = [
     "lean": -1.1,
     "depth": 2.0,
     "wear": 0.06,
-    "band": "#711228"
+    "band": "#711228",
+    "goodreadsId": "136251"
   },
   {
     "id": "billion-dollar-whale-the-man-w-60",
@@ -2415,7 +2561,8 @@ export const books: Book[] = [
     "height": 226,
     "lean": -2.1,
     "depth": -4.1,
-    "wear": 0.05
+    "wear": 0.05,
+    "goodreadsId": "38743564"
   },
   {
     "id": "fortune-s-formula-the-untold-s-30",
@@ -2441,7 +2588,8 @@ export const books: Book[] = [
     "height": 216,
     "lean": -3.1,
     "depth": -3.9,
-    "wear": 0.13
+    "wear": 0.13,
+    "goodreadsId": "186124"
   },
   {
     "id": "that-will-never-work-the-birth-21",
@@ -2467,7 +2615,8 @@ export const books: Book[] = [
     "height": 230,
     "lean": -3.4,
     "depth": 2.1,
-    "wear": 0.34
+    "wear": 0.34,
+    "goodreadsId": "44428950"
   },
   {
     "id": "lost-connections-uncovering-th-19",
@@ -2492,7 +2641,8 @@ export const books: Book[] = [
     "height": 214,
     "lean": -5.0,
     "depth": 3.5,
-    "wear": 0.27
+    "wear": 0.27,
+    "goodreadsId": "34921573"
   },
   {
     "id": "stop-saying-you-re-fine-discov-41",
@@ -2517,7 +2667,8 @@ export const books: Book[] = [
     "height": 224,
     "lean": -0.6,
     "depth": -1.7,
-    "wear": 0.02
+    "wear": 0.02,
+    "goodreadsId": "9735065"
   },
   {
     "id": "harry-potter-and-the-half-bloo-71",
@@ -2543,7 +2694,8 @@ export const books: Book[] = [
     "lean": -3.1,
     "depth": 3.0,
     "wear": 0.04,
-    "band": "#840009"
+    "band": "#840009",
+    "goodreadsId": "1"
   },
   {
     "id": "chaos-monkeys-obscene-fortune-37",
@@ -2569,7 +2721,8 @@ export const books: Book[] = [
     "height": 249,
     "lean": -1.8,
     "depth": 4.3,
-    "wear": 0.32
+    "wear": 0.32,
+    "goodreadsId": "28259132"
   },
   {
     "id": "mindset-the-new-psychology-of-33",
@@ -2595,7 +2748,8 @@ export const books: Book[] = [
     "lean": -3.6,
     "depth": -5.9,
     "wear": 0.2,
-    "band": "#be5e31"
+    "band": "#be5e31",
+    "goodreadsId": "40745"
   },
   {
     "id": "harry-potter-and-the-order-of-89",
@@ -2621,33 +2775,8 @@ export const books: Book[] = [
     "lean": -0.7,
     "depth": -6.6,
     "wear": 0.13,
-    "band": "#0b539c"
-  },
-  {
-    "id": "the-code-silicon-valley-and-th-24",
-    "title": "The Code: Silicon Valley and the Remaking of America",
-    "author": "Margaret O'Mara",
-    "genres": [
-      "Nonfiction"
-    ],
-    "cover": "https://covers.openlibrary.org/b/id/9401824-L.jpg",
-    "year": 2019,
-    "blurb": "The Code: Silicon Valley and the Remaking of America by Margaret O'Mara.",
-    "rating": 0.0,
-    "finished": "Currently reading",
-    "publisher": "Penguin Books",
-    "binding": "hardcover",
-    "finish": "cloth",
-    "spine": "#2a5d98",
-    "ink": "#faf7f0",
-    "face": "sans",
-    "caps": false,
-    "width": 27,
-    "height": 251,
-    "lean": -1.8,
-    "depth": -1.1,
-    "wear": 0.17,
-    "band": "#093c78"
+    "band": "#0b539c",
+    "goodreadsId": "2"
   },
   {
     "id": "i-may-be-wrong-and-other-wisdo-40",
@@ -2672,7 +2801,8 @@ export const books: Book[] = [
     "height": 209,
     "lean": -1.0,
     "depth": 3.6,
-    "wear": 0.25
+    "wear": 0.25,
+    "goodreadsId": "60222414"
   },
   {
     "id": "the-little-liar-22",
@@ -2698,7 +2828,8 @@ export const books: Book[] = [
     "height": 218,
     "lean": -1.2,
     "depth": -6.8,
-    "wear": 0.2
+    "wear": 0.2,
+    "goodreadsId": "112975105"
   },
   {
     "id": "jane-eyre-9",
@@ -2724,7 +2855,8 @@ export const books: Book[] = [
     "lean": -0.9,
     "depth": -6.5,
     "wear": 0.08,
-    "band": "#965824"
+    "band": "#965824",
+    "goodreadsId": "8138287"
   },
   {
     "id": "you-are-a-badass-how-to-stop-d-45",
@@ -2750,7 +2882,8 @@ export const books: Book[] = [
     "height": 197,
     "lean": -3.7,
     "depth": 0.0,
-    "wear": 0.1
+    "wear": 0.1,
+    "goodreadsId": "15843166"
   },
   {
     "id": "quiet-the-power-of-introverts-88",
@@ -2776,7 +2909,8 @@ export const books: Book[] = [
     "height": 216,
     "lean": -4.8,
     "depth": 0.4,
-    "wear": 0.05
+    "wear": 0.05,
+    "goodreadsId": "8520610"
   },
   {
     "id": "the-subtle-art-of-not-giving-a-70",
@@ -2802,7 +2936,8 @@ export const books: Book[] = [
     "height": 210,
     "lean": -0.9,
     "depth": 4.9,
-    "wear": 0.08
+    "wear": 0.08,
+    "goodreadsId": "28257707"
   },
   {
     "id": "rise-of-the-robots-technology-5",
@@ -2828,7 +2963,8 @@ export const books: Book[] = [
     "height": 228,
     "lean": -0.2,
     "depth": 4.1,
-    "wear": 0.18
+    "wear": 0.18,
+    "goodreadsId": "22928874"
   },
   {
     "id": "eleanor-oliphant-is-completely-63",
@@ -2855,7 +2991,8 @@ export const books: Book[] = [
     "height": 214,
     "lean": -5.0,
     "depth": -0.4,
-    "wear": 0.06
+    "wear": 0.06,
+    "goodreadsId": "31434883"
   },
   {
     "id": "elevation-12",
@@ -2870,7 +3007,7 @@ export const books: Book[] = [
     "blurb": "Although Scott Carey doesn't look any different, he's been steadily losing weight. There are a couple of other odd things, too. He weighs the same in his clothes and out of them, no matter how heavy they are. Scott doesn't want to be poked and prodded. He mostly just wants someone else to know, and he trusts Doctor Bob Ellis. In the small town of Castle Rock, the setting of many of King's most iconic stories, Scott is engaged in a low grade - but escalating - battle with the lesbians next door whose dog regularly d",
     "rating": 3.0,
     "finished": "",
-    "publisher": "Scribner",
+    "publisher": "Scribner ",
     "binding": "mass",
     "finish": "matte",
     "spine": "#06060a",
@@ -2882,7 +3019,8 @@ export const books: Book[] = [
     "height": 208,
     "lean": -2.0,
     "depth": -1.9,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "38355410"
   },
   {
     "id": "fooled-by-randomness-the-hidde-68",
@@ -2908,7 +3046,8 @@ export const books: Book[] = [
     "height": 215,
     "lean": -3.2,
     "depth": 6.8,
-    "wear": 0.0
+    "wear": 0.0,
+    "goodreadsId": "38315"
   },
   {
     "id": "the-millionaire-next-door-the-63",
@@ -2934,7 +3073,8 @@ export const books: Book[] = [
     "height": 210,
     "lean": -3.3,
     "depth": 5.2,
-    "wear": 0.14
+    "wear": 0.14,
+    "goodreadsId": "998"
   },
   {
     "id": "dark-pools-the-rise-of-the-mac-60",
@@ -2960,7 +3100,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -0.7,
     "depth": -3.3,
-    "wear": 0.1
+    "wear": 0.1,
+    "goodreadsId": "12917124"
   },
   {
     "id": "algorithms-to-live-by-the-comp-66",
@@ -2986,7 +3127,8 @@ export const books: Book[] = [
     "height": 223,
     "lean": -2.4,
     "depth": 6.4,
-    "wear": 0.29
+    "wear": 0.29,
+    "goodreadsId": "25666050"
   },
   {
     "id": "alibaba-the-house-that-jack-ma-69",
@@ -3012,7 +3154,8 @@ export const books: Book[] = [
     "height": 214,
     "lean": -5.0,
     "depth": -3.1,
-    "wear": 0.24
+    "wear": 0.24,
+    "goodreadsId": "25817524"
   },
   {
     "id": "harry-potter-and-the-goblet-of-95",
@@ -3039,7 +3182,8 @@ export const books: Book[] = [
     "height": 249,
     "lean": -1.0,
     "depth": 5.7,
-    "wear": 0.28
+    "wear": 0.28,
+    "goodreadsId": "6"
   },
   {
     "id": "harry-potter-and-the-prisoner-75",
@@ -3066,7 +3210,8 @@ export const books: Book[] = [
     "height": 249,
     "lean": -1.3,
     "depth": -1.5,
-    "wear": 0.22
+    "wear": 0.22,
+    "goodreadsId": "5"
   },
   {
     "id": "harry-potter-and-the-chamber-o-42",
@@ -3092,7 +3237,8 @@ export const books: Book[] = [
     "lean": -2.6,
     "depth": 5.6,
     "wear": 0.03,
-    "band": "#6faff5"
+    "band": "#6faff5",
+    "goodreadsId": "15881"
   },
   {
     "id": "harry-potter-e-a-pedra-filosof-14",
@@ -3119,7 +3265,8 @@ export const books: Book[] = [
     "height": 206,
     "lean": -3.1,
     "depth": -5.7,
-    "wear": 0.34
+    "wear": 0.34,
+    "goodreadsId": "3484606"
   },
   {
     "id": "lean-in-women-work-and-the-wil-81",
@@ -3145,6 +3292,7 @@ export const books: Book[] = [
     "height": 205,
     "lean": -2.3,
     "depth": 5.9,
-    "wear": 0.15
+    "wear": 0.15,
+    "goodreadsId": "16071764"
   }
 ];
