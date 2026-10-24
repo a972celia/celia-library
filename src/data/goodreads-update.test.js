@@ -1,8 +1,19 @@
 import { describe, expect, test } from "bun:test";
 import { books } from "./books";
 import { toRead } from "./toRead";
+import midnightTrainCover from "../assets/midnight-train-goodreads.asset.json";
+import streetwiseCover from "../assets/streetwise-goodreads.asset.json";
 
 describe("October 2026 Goodreads update", () => {
+  test("uses the verified Goodreads cover for The Midnight Train", () => {
+    expect(books.find((book) => book.goodreadsId === "242380266")?.cover)
+      .toBe(midnightTrainCover.url);
+  });
+
+  test("uses the verified Goodreads cover for Streetwise", () => {
+    expect(books.find((book) => book.goodreadsId === "235699101")?.cover)
+      .toBe(streetwiseCover.url);
+  });
   test("includes 118 read and three currently-reading books", () => {
     expect(books).toHaveLength(121);
     expect(books.filter((book) => book.finished === "Currently reading")).toHaveLength(3);
