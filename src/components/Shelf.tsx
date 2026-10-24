@@ -16,7 +16,7 @@ export function Shelf({ books, justAdded = null }: Props) {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const rowRef = useRef<HTMLDivElement>(null);
   const [overflowing, setOverflowing] = useState(false);
-  const [open, setOpen] = useState<{ index: number; rect: SpineRect } | null>(null);
+  const [open, setOpen] = useState<{ book: Book; rect: SpineRect } | null>(null);
 
   const scrollShelf = useCallback((direction: -1 | 1) => {
     const scroller = scrollerRef.current;
@@ -150,7 +150,8 @@ export function Shelf({ books, justAdded = null }: Props) {
 
   const openAt = (index: number, el: HTMLElement) => {
     const r = el.getBoundingClientRect();
-    setOpen({ index: index % books.length, rect: { left: r.left, top: r.top, width: r.width, height: r.height } });
+    const book = books[index % books.length];
+    if (book) setOpen({ book, rect: { left: r.left, top: r.top, width: r.width, height: r.height } });
   };
 
   return (
