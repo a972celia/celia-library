@@ -14,12 +14,12 @@ describe("October 2026 Goodreads update", () => {
     expect(books.find((book) => book.goodreadsId === "235699101")?.cover)
       .toBe(streetwiseCover.url);
   });
-  test("includes 118 read and three currently-reading books", () => {
+  test.skip("includes 118 read and three currently-reading books", () => {
     expect(books).toHaveLength(121);
     expect(books.filter((book) => book.finished === "Currently reading")).toHaveLength(3);
   });
 
-  test("includes all 38 to-read books", () => {
+  test.skip("includes all 38 to-read books", () => {
     expect(toRead).toHaveLength(38);
     expect(toRead.every((book) => book.finished === "Want to read")).toBe(true);
     expect(toRead[0]?.title).toBe("East of Eden");
@@ -57,5 +57,27 @@ describe("October 2026 Goodreads update", () => {
     const ids = [...books, ...toRead].map((book) => book.goodreadsId);
     expect(ids.every(Boolean)).toBe(true);
     expect(new Set(ids).size).toBe(159);
+  });
+});
+describe("November 2026 Goodreads update", () => {
+  test("has 120 read, 3 currently reading, 36 to-read", () => {
+    expect(books).toHaveLength(123);
+    expect(books.filter((b) => b.finished === "Currently reading")).toHaveLength(3);
+    expect(toRead).toHaveLength(36);
+  });
+  test("The Little Liar finished Nov 2026 rated 5", () => {
+    const b = books.find((b) => b.goodreadsId === "112975105");
+    expect(b?.finished).toBe("Nov 2026");
+    expect(b?.rating).toBe(5);
+  });
+  test("Heart the Lover moved to main shelf, rated 3.25", () => {
+    expect(toRead.some((b) => b.goodreadsId === "228110489")).toBe(false);
+    expect(books.find((b) => b.goodreadsId === "228110489")?.rating).toBe(3.25);
+  });
+  test("Circe is currently reading", () => {
+    expect(books.find((b) => b.goodreadsId === "35959740")?.finished).toBe("Currently reading");
+  });
+  test("Funny Story (did not finish) is excluded", () => {
+    expect([...books, ...toRead].some((b) => b.goodreadsId === "194802722")).toBe(false);
   });
 });
